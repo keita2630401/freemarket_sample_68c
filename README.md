@@ -32,6 +32,7 @@ Things you may want to cover:
 ### Association
 - has_many :items
 - has_many :addresses
+- has_many :cards
 
 ## addressesテーブル
 |Column|Type|Options|
@@ -77,3 +78,34 @@ Things you may want to cover:
 ### Association
 - has_many :items
 - has_ancestry
+
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|number|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :item
+- belongs_to :user
+
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :item
+- belongs_to :user
+
+## cardsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|number|integer|null: false, unique:true|
+|expiration_year|integer|null: false|
+|expiration_month|integer|null: false|
+|csv|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
