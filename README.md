@@ -69,7 +69,7 @@ Things you may want to cover:
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|integer|null: false|
+|image|string|null: false|
 |item_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :item
@@ -86,7 +86,7 @@ Things you may want to cover:
 ## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|number|string|null: false|
+|number|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |item_id|integer|null: false, foreign_key: true|
 ### Association
