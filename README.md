@@ -65,7 +65,7 @@ Things you may want to cover:
 - belongs_to :category
 - has_many :comments, :dependent => :delete_all
 - has_many :likes, :dependent => :delete_all
-- has_many :image, :dependent => :delete_all
+- has_many :images, :dependent => :delete_all
 
 ## imagesテーブル
 |Column|Type|Options|
