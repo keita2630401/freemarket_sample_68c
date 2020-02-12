@@ -33,6 +33,8 @@ Things you may want to cover:
 - has_many :items
 - has_many :addresses
 - has_many :cards
+- has_many :comments
+- has_many :likes
 
 ## addressesテーブル
 |Column|Type|Options|
@@ -61,11 +63,13 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :category
+- has_many :comments
+- has_many :likes
 
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|string|null: false|
+|image|integer|null: false|
 |item_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :item
