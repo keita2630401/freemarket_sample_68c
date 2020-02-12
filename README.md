@@ -36,7 +36,7 @@ Things you may want to cover:
 ## addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|post-number|integer|null: false|
+|post_number|integer|null: false|
 |prefecture|string|null: false|
 |municipality|string|null: false|
 |town|string|null: false|
@@ -51,10 +51,10 @@ Things you may want to cover:
 |price|integer|null: false|
 |name|string|null: false|
 |description|text|null: false|
-|shipping-cost-side|string|null: false|
-|shipping-method|string|null: false|
-|origin-area|string|null: false|
-|shipping-days|string|null: false|
+|shipping_cost_side|string|null: false|
+|shipping_method|string|null: false|
+|origin_area|string|null: false|
+|shipping_days|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 ### Association
@@ -76,3 +76,4 @@ Things you may want to cover:
 |ancestry|string|null: false|
 ### Association
 - has_many :items
+- has_ancestry
