@@ -26,12 +26,12 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|strings|null: false|
-|email|strings|null: false|
-|address|strings|null: false|
-|post-number|strings|null: false|
-|shipping-area|strings|null: false|
-|password|strings|null: false|
+|name|string|null: false|
+|email|string|null: false, unique:true|
+|address|string|null: false|
+|post-number|integer|null: false|
+|shipping-area|string|null: false|
+|password|string|null: false|
 ### Association
 - has_many :users_items
 - has_many :items, through: :users_items
@@ -51,13 +51,13 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |price|integer|null: false|
-|name|strings|null: false|
+|name|string|null: false|
 |description|text|null: false|
-|image|text|null: false|
-|shipping-cost|strings|null: false|
-|shipping-method|strings|null: false|
-|origin-area|strings|null: false|
-|shipping-days|strings|null: false|
+|image|string|null: false|
+|shipping-cost-side|string|null: false|
+|shipping-method|string|null: false|
+|origin-area|string|null: false|
+|shipping-days|string|null: false|
 |parent-category_id|integer|null: false, foreign_key: true|
 |child-category_id|integer|null: false, foreign_key: true|
 |grandchild-category_id|integer|null: false, foreign_key: true|
@@ -93,7 +93,7 @@ Things you may want to cover:
 ## parent-categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|strings|null: false|
+|name|string|null: false|
 ### Association
 - has_many :items
 - has_many :child-categories
@@ -101,7 +101,7 @@ Things you may want to cover:
 ## child-categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|strings|null: false|
+|name|string|null: false|
 |parent-category_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :parent-category
@@ -111,7 +111,7 @@ Things you may want to cover:
 ## grandchild-categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|strings|null: false|
+|name|string|null: false|
 |child-category_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :child-category
