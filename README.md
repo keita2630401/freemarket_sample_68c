@@ -28,24 +28,22 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false|
 |email|string|null: false, unique:true|
-|address|string|null: false|
-|post-number|integer|null: false|
-|shipping-area|string|null: false|
 |password|string|null: false|
 ### Association
-- has_many :users_items
-- has_many :items, through: :users_items
-<!-- - has_many :comments
-- has_many :likes -->
+- has_many :items
+- has_many :addresses
 
-## users_itemsテーブル
+## addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
+|post-number|integer|null: false|
+|prefecture|string|null: false|
+|municipality|string|null: false|
+|town|string|null: false|
+|building|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :item
 
 ## itemsテーブル
 |Column|Type|Options|
@@ -53,66 +51,28 @@ Things you may want to cover:
 |price|integer|null: false|
 |name|string|null: false|
 |description|text|null: false|
-|image|string|null: false|
 |shipping-cost-side|string|null: false|
 |shipping-method|string|null: false|
 |origin-area|string|null: false|
 |shipping-days|string|null: false|
-|parent-category_id|integer|null: false, foreign_key: true|
-|child-category_id|integer|null: false, foreign_key: true|
-|grandchild-category_id|integer|null: false, foreign_key: true|
-### Association
-- has_many :users_items
-- has_many :users, through: :users_items
-<!-- - has_many :comments
-- has_many :likes -->
-- belongs_to :parent-category
-- belongs_to :child-category
-- belongs_to :grandchild-category
-
-<!-- ## likesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|number|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
+|category_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
+- belongs_to :category
+
+## imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|string|null: false|
+|item_id|integer|null: false, foreign_key: true|
+### Association
 - belongs_to :item
 
-## commentsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
-- belongs_to :item -->
-
-## parent-categoriesテーブル
+## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|ancestry|string|null: false|
 ### Association
-- has_many :items
-- has_many :child-categories
-
-## child-categoriesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|parent-category_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :parent-category
-- has_many :grandchild-categories
-- has_many :items
-
-## grandchild-categoriesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|child-category_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :child-category
 - has_many :items
