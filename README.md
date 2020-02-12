@@ -30,11 +30,11 @@ Things you may want to cover:
 |email|string|null: false, unique:true|
 |password|string|null: false|
 ### Association
-- has_many :items
-- has_many :addresses
-- has_many :cards
-- has_many :comments
-- has_many :likes
+- has_many :items, :dependent => :delete_all
+- has_many :addresses, :dependent => :delete_all
+- has_many :cards, :dependent => :delete_all
+- has_many :comments, :dependent => :delete_all
+- has_many :likes, :dependent => :delete_all
 
 ## addressesテーブル
 |Column|Type|Options|
@@ -63,8 +63,9 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :category
-- has_many :comments
-- has_many :likes
+- has_many :comments, :dependent => :delete_all
+- has_many :likes, :dependent => :delete_all
+- has_many :image, :dependent => :delete_all
 
 ## imagesテーブル
 |Column|Type|Options|
