@@ -50,7 +50,7 @@ describe User do
       expect(user).to be_valid
     end
 
-    # 8. passwordが5文字以下であれば登録できないこと
+    # 8. passwordが6文字以下であれば登録できないこと
     it "is invalid with a password that has less than 6 characters " do
       user = build(:user, password: "000000", password_confirmation: "000000")
       user.valid?
