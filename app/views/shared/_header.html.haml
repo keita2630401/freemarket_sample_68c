@@ -1,0 +1,86 @@
+.header
+  .header__main
+    .header__main__logoBox
+      = link_to root_path do
+        %img.logoImg{alt: "ロゴ", src: "/logo.png"}
+    .header__main__searchBox
+      .header__main__searchBox--form
+        %input.searchForm{placeholder: "キーワードから探す"}
+      .header__main__searchBox--icon
+        %button.searchButton{type: "submit"}
+          %img.searchIcon{alt: "ロゴ", src: "/icon-search 1.png"}
+  .header__sub
+    .header__sub__leftBox
+      %ul.header__sub__leftBox__list
+        %li.header__sub__leftBox__list--category
+          = link_to "カテゴリー", root_path
+        %li.header__sub__leftBox__list--brand
+          = link_to "ブランド", root_path
+    .header__sub__rightBox
+      %ul.header__sub__rightBox__list
+        %li.header__sub__rightBox__list--login
+          = link_to "ログイン", root_path
+        %li.header__sub__rightBox__list--registration
+          = link_to "新規会員登録", root_path
+        %li.header__sub__rightBox__list--logout
+          = link_to "ログアウト", root_path
+        %li.header__sub__rightBox__list--myPage
+          = link_to "マイページ", root_path
+
+-# = image_tag "/icon-search 1.png", class: "logo"
+
+-# %ul.menu
+-#   %li.menu__multi
+-#     %a.init-bottom{href:"#"}カテゴリー
+-#     %ul.menu__second-level
+-#       <!-- 第一階層 -->
+-#       %li
+-#         %a.init-right{href: "#"}第二階層2
+-#         %ul.menu__third-level
+-#           %li
+-#             %a.init-right{href: "#"}第三階層
+-#             %ul.menu__fourth-level
+-#               %li
+-#                 %a{href: "#"}第四階層
+-#               %li
+-#                 %a{href: "#"}第四階層
+-#               %li
+-#                 %a{href: "#"}第四階層
+-#           %li
+-#             %a{href: "#"}第三階層
+-#             %ul.menu__fourth-level
+-#               %li
+-#                 %a{href: "#"}第四階層
+-#               %li
+-#                 %a{href: "#"}第四階層
+-#               %li
+-#                 %a{href: "#"}第四階層
+-#           %li
+-#             %a{href: "#"}第三階層
+-#             %ul.menu__fourth-level
+-#               %li
+-#                 %a{href: "#"}第四階層
+-#               %li
+-#                 %a{href: "#"}第四階層
+-#               %li
+-#                 %a{href: "#"}第四階層
+-#             %a.init-right{href: "#"}第三階層
+-#       %li
+-#         %a.init-right{href: "#"}第二階層3
+-#         %ul.menu__third-level
+-#           %li
+-#             %a.init-right{href: "#"}第三階層
+-#           %li
+-#             %a.init-right{href: "#"}第三階層
+-#           %li
+-#             %a.init-right{href: "#"}第三階層
+-#       %li
+-#         %a.init-right{href: "#"}第二階層4
+-#       %li
+-#         %a.init-right{href: "#"}第二階層5
+-#       %li
+-#         %a.init-right{href: "#"}第二階層6
+-#       %li
+-#         %a.init-right{href: "#"}第二階層7
+-#       %li
+-#         %a.init-right{href: "#"}第二階層8
