@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :comments,   :dependent => :delete_all
   has_many :likes,      :dependent => :delete_all
 
-
+  validates :name, presence: true
   VALID_PASSWORD_REGEX = /\A[a-z0-9]+\z/i
   validates :encrypted_password, format: { with: VALID_PASSWORD_REGEX}
   validates :encrypted_password, length: { minimum: 7 }
