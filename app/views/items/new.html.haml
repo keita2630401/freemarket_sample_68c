@@ -1,0 +1,7 @@
+.sample
+  = form_with model: @item, local: true do |form|
+    .sample__image
+      = form.fields_for :images do |image|
+        = image.file_field :src
+    .sample_submit
+      = form.submit
