@@ -76,3 +76,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem "haml-rails", "~> 2.0"
+
+gem 'jquery-rails'
