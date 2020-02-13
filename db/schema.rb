@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 2020_02_13_025021) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "last_name", default: "", null: false
+    t.string "family_name", default: "", null: false
     t.string "first_name", default: "", null: false
-    t.string "last_name_kana", default: "", null: false
+    t.string "family_name_kana", default: "", null: false
     t.string "first_name_kana", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
