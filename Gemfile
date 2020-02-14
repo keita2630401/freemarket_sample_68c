@@ -78,8 +78,11 @@ gem 'fog-aws'
 gem 'carrierwave'
 gem 'mini_magick'
 
-gem "haml-rails", "~> 2.0"
-
 gem 'jquery-rails'
 
 gem 'active_hash'
+gem 'devise'
+gem 'rspec-rails'
+gem 'factory_bot_rails'
+gem  'haml-rails'
+gem 'erb2haml'
