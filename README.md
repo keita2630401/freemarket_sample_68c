@@ -35,6 +35,7 @@ Things you may want to cover:
 - has_many :cards, :dependent => :delete_all
 - has_many :comments, :dependent => :delete_all
 - has_many :likes, :dependent => :delete_all
+- has_many :boughts, :dependent => :delete_all 
 
 ## addressesテーブル
 |Column|Type|Options|
@@ -66,6 +67,16 @@ Things you may want to cover:
 - has_many :comments, :dependent => :delete_all
 - has_many :likes, :dependent => :delete_all
 - has_many :images, :dependent => :delete_all
+- has_one :boughts, :dependent => :delete_all
+
+## boughtsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :item
 
 ## imagesテーブル
 |Column|Type|Options|
