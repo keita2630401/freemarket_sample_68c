@@ -63,7 +63,7 @@ describe Item do
       item.valid?
       expect(item.errors[:name]).to include("is too long (maximum is 40 characters)")
     end
-
+ 
     # 10. nameが40文字以下では登録できること
     it "is valid with a name that has less than 40 characters " do
       item = build(:item, name: "a"*40)
