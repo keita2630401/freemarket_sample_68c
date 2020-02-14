@@ -1,0 +1,83 @@
+.wrapper
+  %main.content
+    .header__logo
+      %a(href="#")
+        %img{src: "/logo.png",alt: "フリマ"}
+    .item__information
+      %h2.single-head 商品情報を入力
+    .exhibition
+      .exhibition__image
+        .exhibition__image__style
+          %label 出品画像
+          %span 必須
+        %p 最大10枚までアップロードできます。
+        .image-upload
+          %input.drop-file{:multiprename => "image1", :style => "display:none;", :type => "file"}
+          %pre.drop-file-form ドラッグアンドドロップまたはクリックしてファイルをアップロード
+    .item__description
+      .item__description__name
+        %label 商品名
+        %span 必須
+      %textarea.area
+      .item__description__form
+        %label 商品の説明
+        %span 必須
+      %textarea.field
+    .item__details
+      %p 商品詳細
+      .category
+        %label カテゴリー
+        %span 必須
+      %textarea.area
+      .brand
+        %label ブランド
+        %span 任意
+      %textarea.area
+      .status
+        %label 商品の状態
+        %span 必須
+      %textarea.area
+    .delivery
+      %p 配送について
+      .delibery__charge
+        %label 発送料の負担
+        %span 必須
+      %textarea.area
+      .delibery__origin
+        %label 発送元の地域
+        %span 必須
+      %textarea.area
+      .delibery__days
+        %label 発送までの日数
+        %span 必須
+      %textarea.area
+    .price
+      %p 価格（¥300〜9,999,999)
+      .price__selling
+        .price__selling__form
+          .price__selling__form2
+            %label 販売価格
+            %span 必須
+          .money
+            .money__en ¥
+            %textarea.price-area 0
+        .sales
+          .sales__commission 販売手数料(10%)
+        .profit 販売利益
+
+    .confirm
+      = submit_tag "出品する", class: 'btn'
+      %a.btn-default もどる
+  %footer.footer__logo
+    %nav
+      %ul.var
+        %li
+          %a(href="#")プライバシーポリシー
+        %li
+          %a(href="#")フリマ利用規約
+        %li
+          %a(href="#")特定商取引に関する表記
+    %a(href="#")
+      %img{src: "/logo-white.png",alt: "フリマ"}
+    %p
+      %small © Furima, Inc.

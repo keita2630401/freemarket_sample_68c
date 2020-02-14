@@ -73,3 +73,5 @@ end
 gem 'fog-aws'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'haml-rails'
+gem 'erb2haml'
