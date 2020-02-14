@@ -1,4 +1,4 @@
 class HomeController < ApplicationController
-  def top
+  def new2
   end
 end
