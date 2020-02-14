@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe Item do
   describe '#create' do
-    # 1. nameとdescription、conditionとshipping_cost_sideとorigin_areaとshipping_daysとpriceが存在すれば登録できること
-    it "is valid with name, description, condition, shipping_cost_side, origin_area, shipping_days, price" do
+    # 1. nameとdescription、condition_idとshipping_cost_sideとorigin_areaとshipping_daysとpriceが存在すれば登録できること
+    it "is valid with name, description, condition_id, ShippingCostSide_id, OriginArea_id, ShippingDays_id, price" do
       item = build(:item)
       expect(item).to be_valid
     end
@@ -22,32 +22,32 @@ describe Item do
       expect(item.errors[:description]).to include("can't be blank")
     end
 
-    # 4. conditionが空では登録できないこと
-    it "is invalid without a condition" do
-      item = build(:item, condition: nil)
+    # 4. condition_idが空では登録できないこと
+    it "is invalid without a condition_id" do
+      item = build(:item, condition_id: nil)
       item.valid?
-      expect(item.errors[:condition]).to include("can't be blank")
+      expect(item.errors[:condition_id]).to include("can't be blank")
     end
 
-    # 5. shipping_cost_sideが空では登録できないこと
-    it "is invalid without a shipping_cost_side" do
-      item = build(:item, shipping_cost_side: nil)
+    # 5. ShippingCostSide_idost_sideが空では登録できないこと
+    it "is invalid without a ShippingCostSide_id" do
+      item = build(:item, ShippingCostSide_id: nil)
       item.valid?
-      expect(item.errors[:shipping_cost_side]).to include("can't be blank")
+      expect(item.errors[:ShippingCostSide_id]).to include("can't be blank")
     end
 
-    # 6. origin_areaが空では登録できないこと
-    it "is invalid without an origin_area" do
-      item = build(:item, origin_area: nil)
+    # 6. OriginArea_idが空では登録できないこと
+    it "is invalid without an OriginArea_id" do
+      item = build(:item, OriginArea_id: nil)
       item.valid?
-      expect(item.errors[:origin_area]).to include("can't be blank")
+      expect(item.errors[:OriginArea_id]).to include("can't be blank")
     end
 
-    # 7. shipping_daysが空では登録できないこと
-    it "is invalid without a shipping_days" do
-      item = build(:item, shipping_days: nil)
+    # 7. ShippingDays_idが空では登録できないこと
+    it "is invalid without a ShippingDays_id" do
+      item = build(:item, ShippingDays_id: nil)
       item.valid?
-      expect(item.errors[:shipping_days]).to include("can't be blank")
+      expect(item.errors[:ShippingDays_id]).to include("can't be blank")
     end
 
     # 8. priceが空では登録できないこと
@@ -63,7 +63,7 @@ describe Item do
       item.valid?
       expect(item.errors[:name]).to include("is too long (maximum is 40 characters)")
     end
- 
+
     # 10. nameが40文字以下では登録できること
     it "is valid with a name that has less than 40 characters " do
       item = build(:item, name: "a"*40)
