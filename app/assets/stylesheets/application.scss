@@ -1,9 +1,8 @@
 @import "./_reset";
 @import "./_variable";
 @import "./top.scss";
-@import "./header.scss";
-@import "./_pulldown.scss";
-@import "./footer.scss";
+@import "./modules/header.scss";
+@import "./modules/footer.scss";
 
 body{
   margin: 0;
@@ -14,8 +13,8 @@ body{
   font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
   ul{
     list-style: none;
-    padding: 0;
   }
-  a {text-decoration: none;}
-
+  a {
+    text-decoration: none;
+  }
 }
