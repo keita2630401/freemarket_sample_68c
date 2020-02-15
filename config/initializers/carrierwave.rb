@@ -1,7 +1,6 @@
 require 'carrierwave/storage/abstract'
 require 'carrierwave/storage/file'
 require 'carrierwave/storage/fog'
-
 CarrierWave.configure do |config|
   if Rails.env.production?
     config.storage = :fog
@@ -10,13 +9,11 @@ CarrierWave.configure do |config|
       provider: 'AWS',
       aws_access_key_id: Rails.application.secrets.aws_access_key_id,
       aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
-      a
       region: 'ap-northeast-1'
     }
 
     config.fog_directory  = 'freemarket-sample-68c'
     config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/freemarket-sample-68c'
-
   else
     config.storage :file
     config.enable_processing = false if Rails.env.test?
