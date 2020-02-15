@@ -1,6 +1,6 @@
 .topMain{
   &__box1{
-    color: #fff;
+    color: $mainWhite;
     &__contents{
       background-image: url("/bg-mainVisual-pict_pc.jpg");
       background-repeat: no-repeat;
@@ -61,7 +61,7 @@
             content: "";
             width: 70px;
             height: 4px;
-            background-color: #3CCACE;
+            background-color: $mainGreen;
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -92,7 +92,7 @@
             text-align: center;
             padding: 10px 20px;
             background-color: $mainGreen;
-            color: #fff;
+            color: $mainWhite;
           }
         }
         .steps{
@@ -105,7 +105,7 @@
     }
   }
   &__box3{
-    color: #fff;
+    color: $mainWhite;
     &__contents{
       background-image: url("/bg-topMiddleDl-pict.jpg");
       background-repeat: no-repeat;
@@ -165,7 +165,7 @@
             content: "";
             width: 70px;
             height: 4px;
-            background-color: #3CCACE;
+            background-color: $mainGreen;
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -224,7 +224,7 @@
         min-width: 480px;
         margin-right: 5%;
         &--card{
-          background-color: #fff;
+          background-color: $mainWhite;
           width: 30%;
           margin-right: 10px;
           position: relative;
@@ -292,7 +292,7 @@
             opacity: 0.8;
             cursor: pointer;
           }
-          background-color: #fff;
+          background-color: $mainWhite;
           width: 30%;
           margin-right: 10px;
           position: relative;
@@ -320,7 +320,7 @@
     }
   }
   &__box7{
-    color: #fff;
+    color: $mainWhite;
     &__contents{
       background-image: url("/bg-appBanner-pict.jpg");
       background-repeat: no-repeat;

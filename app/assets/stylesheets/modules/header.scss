@@ -47,7 +47,9 @@
     justify-content: space-between;
     align-items: center;
     &__leftBox{
-      li a {background-color: white;
+      li a {
+        background-color: $mainWhite
+        ;
       margin: 0;
       padding: 0;
       width: 100px;
