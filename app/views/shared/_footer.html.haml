@@ -1,1 +1,38 @@
-.footer フッターです
+.footer
+  %ul.footer__contents
+    %li.footer__contents__box
+      %h2.footer__contents__box__title FURIMAについて
+      %ul.footer__contents__box__list
+        %li
+          = link_to "会社概要（運営会社）", root_path
+        %li
+          = link_to "プライバシーポリシー", root_path
+        %li
+          = link_to "FURIMA利用規約", root_path
+        %li
+          = link_to "ポイントに関する特約", root_path
+    %li.footer__contents__box
+      %h2.title FURIMAをみる
+      %ul.footer__contents__box__list
+        %li
+          = link_to "カテゴリー一覧", root_path
+        %li
+          = link_to "ブランド一覧", root_path
+    %li.footer__contents__box
+      %h2.title ヘルプ&ガイド
+      %ul.footer__contents__box__list
+        %li
+          = link_to "FURIMAガイド", root_path
+        %li
+          = link_to "FURIMAロゴ利用ガイドライン", root_path
+        %li
+          = link_to "お知らせ", root_path
+  .footer__logo
+    = link_to root_path do
+      %img.logoImg{alt: "ロゴ", src: "/logo-white.png"}
+  .footer__copyright
+    %p.copyright © FURIMA
+  .footer__buyBtn
+    = link_to root_path do
+      %span 出品する
+      %img.buyBtnImg{alt: "買う", src: "/icon_camera.png"}

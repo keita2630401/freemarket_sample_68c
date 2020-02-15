@@ -5,12 +5,129 @@
       .topMain__box1__contents__title
         %h2.title 人生を変えるフリマアプリ
       .topMain__box1__contents__subTitle
-        %h3.subTitle FURIMAはだれでもかんたんに出品・購入できるフリマアプリです
+        %h3.subTitle
+          FURIMAはだれでもかんたんに出品・購入できるフリマアプリです
       .topMain__box1__contents__downloadLink
+        = link_to root_path do
+          %img.googleImg{alt: "googlePlayリンク", src: "/google-play-badge.png"}
+        = link_to root_path do
+          %img.appleImg{alt: "appleStoreリンク", src: "/App_Store_Badge.png"}
   .topMain__box2
+    .topMain__box2__contents
+      .topMain__box2__contents__title
+        %h2.title FURIMAが選ばれる3つの理由
+      %ul.topMain__box2__contents__cardList
+        %li.topMain__box2__contents__cardList--card
+          %img.card{alt: "card", src: "/pict-reason-01.jpg"}
+            %span.number 1
+          %h3.steps
+            %span 3分
+            ですぐに出品
+          %p.description スマホで入力するだけで簡単に出品できる！
+        %li.topMain__box2__contents__cardList--card
+          %img.card{alt: "card", src: "/pict-reason-02.jpg"}
+            %span.number 2
+          %h3.steps
+            %span シンプル
+            で使いやすい
+          %p.description めんどくさい入力は必要なく、検索も購入もスムーズ！
+        %li.topMain__box2__contents__cardList--card
+          %img.card{alt: "card", src: "/pict-reason-03.jpg"}
+            %span.number 3
+          %h3.steps
+            手数料
+            %span< 業界最安
+          %p.description 最大3%でお得に出品&購入！
   .topMain__box3
+    .topMain__box3__contents
+      .topMain__box3__contents__title
+        %h2.title 会員数日本一位
+      .topMain__box3__contents__subTitle
+        %h3.subTitle
+          FURIMAは、フリマアプリで最も人気。
+          出品。購入回数も業界多数です！
+          ほしかったあの商品に出会えるかもしれません。
+      .topMain__box3__contents__downloadLink
+        = link_to root_path do
+          %img.googleImg{alt: "googlePlayリンク", src: "/google-play-badge.png"}
+        = link_to root_path do
+          %img.appleImg{alt: "appleStoreリンク", src: "/App_Store_Badge.png"}
   .topMain__box4
+    .topMain__box4__contents
+      .topMain__box4__contents__title
+        %h2.title FURIMAの特徴
+      %ul.topMain__box4__contents__cardList
+        %li.topMain__box4__contents__cardList--card
+          %img.card{alt: "card", src: "/icon-01.png"}
+          %h3.steps 簡単に売り買いできる
+          %p.description スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+        %li.topMain__box4__contents__cardList--card
+          %img.card{alt: "card", src: "/icon-03.png"}
+          %h3.steps 売上金は即日振込みに対応
+          %p.description 午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!
+        %li.topMain__box4__contents__cardList--card
+          %img.card{alt: "card", src: "/icon-04.png"}
+          %h3.steps 様々な支払いに対応
+          %p.description お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
   .topMain__box5
+    .topMain__box5__contents
+      .topMain__box5__contents__title
+        %h2.title ピックアップカテゴリー
+      .topMain__box5__contents__subtitle
+        %h3.subtitle 新規投稿商品
+      %ul.topMain__box5__contents__cardList
+        %li.topMain__box5__contents__cardList--card
+          %img.card{alt: "card", src: "/member_photo_noimage_thumb.png"}
+          %h3.name product3
+          %p.price 50000円
+          %p.likes ✭0
+          %p.tax (税込み)
+        %li.topMain__box5__contents__cardList--card
+          %img.card{alt: "card", src: "/member_photo_noimage_thumb.png"}
+          %h3.name product3
+          %p.price 50000円
+          %p.likes ✭0
+          %p.tax (税込み)
+        %li.topMain__box5__contents__cardList--card
+          %img.card{alt: "card", src: "/member_photo_noimage_thumb.png"}
+          %h3.name product3
+          %p.price 50000円
+          %p.likes ✭0
+          %p.tax (税込み)
   .topMain__box6
+    .topMain__box6__contents
+      .topMain__box6__contents__title
+        %h2.title ピックアップブランド
+      .topMain__box6__contents__subtitle
+        %h3.subtitle アーカイバ
+      %ul.topMain__box6__contents__cardList
+        %li.topMain__box6__contents__cardList--card
+          %img.card{alt: "card", src: "/member_photo_noimage_thumb.png"}
+          %h3.name product3
+          %p.price 50000円
+          %p.likes ✭0
+          %p.tax (税込み)
+        %li.topMain__box6__contents__cardList--card
+          %img.card{alt: "card", src: "/member_photo_noimage_thumb.png"}
+          %h3.name product3
+          %p.price 50000円
+          %p.likes ✭0
+          %p.tax (税込み)
+        %li.topMain__box6__contents__cardList--card
+          %img.card{alt: "card", src: "/member_photo_noimage_thumb.png"}
+          %h3.name product3
+          %p.price 50000円
+          %p.likes ✭0
+          %p.tax (税込み)
   .topMain__box7
+    .topMain__box7__contents
+      .topMain__box7__contents__subTitle
+        %h3.subTitle だれでもかんたん、人生を変えるフリマアプリ
+      .topMain__box7__contents__title
+        %h2.title 今すぐ無料ダウンロード！
+      .topMain__box7__contents__downloadLink
+        = link_to root_path do
+          %img.googleImg{alt: "googlePlayリンク", src: "/google-play-badge.png"}
+        = link_to root_path do
+          %img.appleImg{alt: "appleStoreリンク", src: "/App_Store_Badge.png"}
 =render  "shared/footer"

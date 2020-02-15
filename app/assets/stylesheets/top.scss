@@ -1,11 +1,368 @@
 .topMain{
   &__box1{
+    color: #fff;
     &__contents{
       background-image: url("/bg-mainVisual-pict_pc.jpg");
+      background-repeat: no-repeat;
       background-size: cover;
-      .topMain__box1__contents__title{}
-      .topMain__box1__contents__subTitle{}
-      .topMain__box1__contents__downloadLink{}
+      background-position: center center;
+      width: 100%;
+      min-width: 480px;
+      height: 560px;
+      padding: 0 60px;
+      align-items: center;
+      padding-top: 200px;
+      &__title{
+        .title{
+          margin: 0;
+          text-shadow: 0 0 5px rgba(0,0,0,0.4);
+          font-size: 60px;
+        }
+      }
+      &__subTitle{
+        .subTitle{
+          font-size: 20px;
+        }
+      }
+      &__downloadLink{
+        display: flex;
+        .googleImg{
+          height: 70px
+        }
+        .googleImg:hover{
+          opacity: 0.8;
+        }
+        .appleImg{
+          padding-left: 10px;
+          width: 200px;
+        }
+        .appleImg:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &__box2{
+    &__contents{
+      width: 100%;
+      min-width: 480px;
+      padding: 60px 300px;
+      align-items: center;
+      &__title{
+          min-width: 480px;
+          text-align: center;
+          font-size: 26px;
+          line-height: 1.4;
+          font-weight: bold;
+          margin-bottom: 25px;
+          padding-bottom: 15px;
+          position: relative;
+          &::after{
+            content: "";
+            width: 70px;
+            height: 4px;
+            background-color: #3CCACE;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+      }
+      &__cardList{
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 480px;
+        margin-right: 5%;
+        &--card{
+          width: 30%;
+          margin-right: 10px;
+          position: relative;
+          .card{
+            width: 100%;
+          }
+          .number{
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 4%;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px 20px;
+            background-color: $mainGreen;
+            color: #fff;
+          }
+        }
+        .steps{
+          span{
+            color: $mainGreen;
+          }
+        }
+        .description{}
+      }
+    }
+  }
+  &__box3{
+    color: #fff;
+    &__contents{
+      background-image: url("/bg-topMiddleDl-pict.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      min-width: 540px;
+      height: 560px;
+      padding: 0 60px;
+      align-items: center;
+      padding-top: 200px;
+      &__title{
+        .title{
+          margin: 0;
+          text-shadow: 0 0 5px rgba(0,0,0,0.4);
+          font-size: 60px;
+        }
+      }
+      &__subTitle{
+        .subTitle{
+          font-size: 20px;
+        }
+      }
+      &__downloadLink{
+        display: flex;
+        .googleImg{
+          height: 70px
+        }
+        .googleImg:hover{
+          opacity: 0.8;
+        }
+        .appleImg{
+          padding-left: 10px;
+          width: 200px;
+        }
+        .appleImg:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &__box4{
+    &__contents{
+      width: 100%;
+      min-width: 480px;
+      padding: 60px 300px;
+      align-items: center;
+      &__title{
+          text-align: center;
+          font-size: 26px;
+          line-height: 1.4;
+          font-weight: bold;
+          margin-bottom: 25px;
+          padding-bottom: 15px;
+          position: relative;
+          &::after{
+            content: "";
+            width: 70px;
+            height: 4px;
+            background-color: #3CCACE;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+      }
+      &__cardList{
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 480px;
+        margin-right: 5%;
+        &--card{
+          width: 30%;
+          margin-right: 10px;
+          position: relative;
+          .card{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &__box5{
+    background-color: #f8f8f8;
+    &__contents{
+      width: 100%;
+      min-width: 480px;
+      padding: 60px 300px;
+      align-items: center;
+      &__title{
+        min-width: 480px;
+        text-align: center;
+        font-size: 26px;
+        line-height: 1.4;
+        font-weight: bold;
+        position: relative;
+      }
+      &__subtitle{
+        .subtitle{
+          min-width: 480px;
+          text-align: center;
+          font-size: 26px;
+          line-height: 1.4;
+          font-weight: bold;
+          position: relative;
+          color: $mainGreen;
+          margin: 0;
+        }
+      }
+      &__cardList{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 480px;
+        margin-right: 5%;
+        &--card{
+          background-color: #fff;
+          width: 30%;
+          margin-right: 10px;
+          position: relative;
+          &:hover{
+            opacity: 0.8;
+          }
+          .card{
+            width: 100%;
+          }
+          .name{
+            font-weight: normal;
+          }
+          .price{
+            margin: 0;
+            position: absolute;
+          }
+          .likes{
+            margin: 0;
+            position: relative;
+            left: calc(100% - 26px);
+          }
+          .tax{
+            margin: 0;
+            font-size: 5px;
+          }
+        }
+      }
+    }
+  }
+  &__box6{
+    background-color: #f8f8f8;
+    &__contents{
+      width: 100%;
+      min-width: 480px;
+      padding: 60px 300px;
+      align-items: center;
+      &__title{
+        min-width: 480px;
+        text-align: center;
+        font-size: 26px;
+        line-height: 1.4;
+        font-weight: bold;
+        position: relative;
+      }
+      &__subtitle{
+        .subtitle{
+          min-width: 480px;
+          text-align: center;
+          font-size: 26px;
+          line-height: 1.4;
+          font-weight: bold;
+          position: relative;
+          color: $mainGreen;
+          margin: 0;
+        }
+      }
+      &__cardList{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 480px;
+        margin-right: 5%;
+        &--card{
+          &:hover{
+            opacity: 0.8;
+            cursor: pointer;
+          }
+          background-color: #fff;
+          width: 30%;
+          margin-right: 10px;
+          position: relative;
+          .card{
+            width: 100%;
+          }
+          .name{
+            font-weight: normal;
+          }
+          .price{
+            margin: 0;
+            position: absolute;
+          }
+          .likes{
+            margin: 0;
+            position: relative;
+            left: calc(100% - 26px);
+          }
+          .tax{
+            margin: 0;
+            font-size: 5px;
+          }
+        }
+      }
+    }
+  }
+  &__box7{
+    color: #fff;
+    &__contents{
+      background-image: url("/bg-appBanner-pict.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      min-width: 700px;
+      height: 300px;
+      padding: 0 60px;
+      align-items: center;
+      padding-top: 50px;
+      text-align: center;
+      &__subTitle{
+        .subTitle{
+          font-size: 30px;
+          margin: 0;
+        }
+      }
+      &__title{
+        .title{
+          text-shadow: 0 0 5px rgba(0,0,0,0.4);
+          font-size: 40px;
+          margin: 0;
+        }
+      }
+      &__downloadLink{
+        display: flex;
+        justify-content: center;
+        .googleImg{
+          height: 70px
+        }
+        .googleImg:hover{
+          opacity: 0.8;
+        }
+        .appleImg{
+          padding-left: 10px;
+          width: 200px;
+        }
+        .appleImg:hover{
+          opacity: 0.8;
+        }
+      }
     }
   }
 }
