@@ -1,0 +1,122 @@
+.header{
+  padding: 0 100px;
+  ul{
+    padding: 0;
+  }
+  &__main{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    &__logoBox{
+      margin-right: 30px;
+      .logoImg{
+        width: 150px;
+      }
+    }
+    &__searchBox{
+      display: flex;
+      width: 100%;
+      &--form{
+        width: 100%;
+        .searchForm{
+          height: 36px;
+          width: 100%;
+          font-size: 16px;
+        }
+      }
+      &--icon{
+        .searchButton{
+          margin-left: 1px;
+          background-color: $mainGreen;
+          height: 36px;
+          width: 36px;
+          .searchIcon{
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+  &__sub{
+    width: 100%;
+    min-width: 480px;
+    a{
+      color: #333;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__leftBox{
+      li a {
+        background-color: $mainWhite
+        ;
+      margin: 0;
+      padding: 0;
+      width: 100px;
+      display: block;
+      }
+      &__list{
+        display: flex;
+        justify-content: space-between;
+        &__categoryMenu{
+          &:hover .header__sub__leftBox__list__categoryMenu__secondLevel{
+            visibility: visible;
+            opacity: 1;
+          }
+          &__secondLevel{
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            &--list{
+              position: relative;
+              &:hover .header__sub__leftBox__list__categoryMenu__thirdLevel{
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+          }
+          &__thirdLevel{
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            &--list{
+              position: relative;
+              &:hover .header__sub__leftBox__list__categoryMenu__fourthLevel{
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+          }
+          &__fourthLevel{
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 100%;
+          }
+        }
+        &__brand{
+          &:hover .header__sub__leftBox__list__brand__secondLevel{
+            visibility: visible;
+            opacity: 1;
+          }
+          &__secondLevel{
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+          }
+        }
+      }
+    }
+    &__rightBox{
+      &__list{
+        display: flex;
+        li{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
