@@ -6,11 +6,7 @@ include CarrierWave::MiniMagick
   # Choose what kind of storage to use for this uploader:
   storage :fog
 
-  if Rails.env.development?
-    storage :file
-  elsif Rails.env.test?
-    storage :file
-  else
+  if Rails.env.development? || Rails.env.test?
     storage :fog
   end
 

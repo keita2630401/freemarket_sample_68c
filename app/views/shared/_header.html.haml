@@ -2,13 +2,13 @@
   .header__main
     .header__main__logoBox
       = link_to root_path do
-        %img.logoImg{alt: "ロゴ", src: "/logo.png"}
+        = image_tag "/logo.png", alt: "ロゴ", class: "logoImg"
     .header__main__searchBox
       .header__main__searchBox--form
         %input.searchForm{placeholder: "キーワードから探す"}
       .header__main__searchBox--icon
         %button.searchButton{type: "submit"}
-          %img.searchIcon{alt: "検索", src: "/icon-search 1.png"}
+          = image_tag "/icon-search 1.png", alt: "検索", class: "searchIcon"
   .header__sub
     .header__sub__leftBox
       %ul.header__sub__leftBox__list

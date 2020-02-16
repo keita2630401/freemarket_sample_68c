@@ -29,10 +29,10 @@
           = link_to "お知らせ", root_path
   .footer__logo
     = link_to root_path do
-      %img.logoImg{alt: "ロゴ", src: "/logo-white.png"}
+      = image_tag "/logo-white.png", alt: "ロゴ", class: "logoImg"
   .footer__copyright
     %p.copyright © FURIMA
   .footer__buyBtn
     = link_to root_path do
       %span 出品する
-      %img.buyBtnImg{alt: "買う", src: "/icon_camera.png"}
+      = image_tag "/icon_camera.png", alt: "買う", class: "buyBtnImg"
