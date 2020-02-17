@@ -241,6 +241,8 @@ GEM
       ffi (~> 1.0)
     regexp_parser (1.6.0)
     responders (3.0.0)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rspec-core (3.9.1)
       rspec-support (~> 3.9.1)
     rspec-expectations (3.9.0)
