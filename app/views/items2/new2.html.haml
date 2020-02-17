@@ -1,8 +1,9 @@
 .wrapper
   %main.content
     .header__logo
-      %a(href="#")
-        %img{src: "/logo.png",alt: "フリマ"}
+      %a
+      = link_to image_tag("/logo.png", alt: "フリマ""出品ページ"),"#"
+
     .item__information
       %h2.single-head 商品情報を入力
     .exhibition
@@ -72,12 +73,15 @@
     %nav
       %ul.var
         %li
-          %a(href="#")プライバシーポリシー
+          %a
+            = link_to 'プライバシーポリシー', '＃'
         %li
-          %a(href="#")フリマ利用規約
+          %a
+            = link_to 'フリマ利用規約', '＃'
         %li
-          %a(href="#")特定商取引に関する表記
-    %a(href="#")
-      %img{src: "/logo-white.png",alt: "フリマ"}
+          %a
+            = link_to '特定商取引に関する表記', '＃'
+    %a
+      = link_to image_tag("/logo-white.png", alt: "フリマ"),"#"
     %p
       %small © Furima, Inc.
