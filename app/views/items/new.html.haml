@@ -1,0 +1,24 @@
+.sample
+  = form_with model: @item, local: true do |form|
+    #sample__image
+      = form.fields_for :images do |image|
+        .js-file_group{data: {index: image.index}}
+          = image.file_field :image, class: "js-file"
+          %br
+          .js-remove 削除
+    .sample__name
+      = form.text_field :name, placeholder: "商品名（必須 40文字まで)"
+    .sample__description
+      = find_and_preserve(form.text_area :description, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。")
+    .sample__condition
+      = form.collection_select :condition_id, Condition.all, :id, :name, prompt: "選択してください"
+    .sample__shippingCostSide
+      = form.collection_select :ShippingCostSide_id, ShippingCostSide.all, :id, :name, prompt: "選択してください"
+    .sample__originArea
+      = form.collection_select :OriginArea_id, Prefecture.all, :id, :name, prompt: "選択してください"
+    .sample__days
+      = form.collection_select :ShippingDays_id, ShippingDays.all, :id, :name, prompt: "選択してください"
+    .sample__price
+      = form.number_field :price, placeholder: "0"
+    .sample_submit
+      = form.submit
