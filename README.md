@@ -26,7 +26,12 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|nickname|string|null: false|
+|family_name|string|null: false|
+|first_name|string|null: false|
+|family_name_kana|string|null: false|
+|first_name_kana|string|null: false|
+|birthday|date|null: false|
 |email|string|null: false, unique:true|
 |password|string|null: false|
 ### Association
@@ -39,11 +44,16 @@ Things you may want to cover:
 ## addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
+|family_name|string|null: false|
+|first_name|string|null: false|
+|family_name_kana|string|null: false|
+|first_name_kana|string|null: false|
 |post_number|integer|null: false|
 |prefecture|string|null: false|
 |municipality|string|null: false|
 |town|string|null: false|
 |building|string|null: false|
+|telphone_number|integer|---|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
