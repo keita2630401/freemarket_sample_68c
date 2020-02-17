@@ -1,8 +1,8 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all.last(3).reverse
+    @items = Item.all.last(3).where(status: 'exihibiting').includes(:user).reserve
   end
-
+  
   def new
     @item = Item.new
     @item.images.new
