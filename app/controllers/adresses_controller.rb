@@ -29,6 +29,7 @@ class AdressesController < ApplicationController
   end
 
   private
+  
   def adress_params
     params.require(:adress).permit( user_ids: [] )
   end
