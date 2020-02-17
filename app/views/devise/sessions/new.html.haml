@@ -6,7 +6,7 @@
     %p.registration-main__for-sign-up__announcement
       アカウントをお持ちでない方はこちら
       %br/
-    %a.registration-main__for-sign-up__btn{href: new_user_registration_path} 新規会員登録
+    = link_to "新規会員登録", new_user_registration_path, class:"registration-main__for-sign-up__btn"
   = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
     .field
       = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
