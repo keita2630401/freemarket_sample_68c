@@ -1,4 +1,8 @@
 class ItemsController < ApplicationController
+  def index
+    @items = Item.all.last(3).reverse
+  end
+
   def new
     @item = Item.new
     @item.images.new
