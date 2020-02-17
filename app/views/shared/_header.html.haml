@@ -1,0 +1,54 @@
+.header
+  .header__main
+    .header__main__logoBox
+      = link_to root_path do
+        = image_tag "/logo.png", alt: "ロゴ", class: "logoImg"
+    .header__main__searchBox
+      .header__main__searchBox--form
+        %input.searchForm{placeholder: "キーワードから探す"}
+      .header__main__searchBox--icon
+        %button.searchButton{type: "submit"}
+          = image_tag "/icon-search 1.png", alt: "検索", class: "searchIcon"
+  .header__sub
+    .header__sub__leftBox
+      %ul.header__sub__leftBox__list
+        %li.header__sub__leftBox__list__categoryMenu
+          = link_to "カテゴリー", root_path
+          %ul.header__sub__leftBox__list__categoryMenu__secondLevel
+            %li.header__sub__leftBox__list__categoryMenu__secondLevel--list
+              = link_to "レディース", root_path
+              %ul.header__sub__leftBox__list__categoryMenu__thirdLevel
+                %li.header__sub__leftBox__list__categoryMenu__thirdLevel--list
+                  = link_to "パンツ", root_path
+                %li.header__sub__leftBox__list__categoryMenu__thirdLevel--list
+                  = link_to "パンツ", root_path
+                  %ul.header__sub__leftBox__list__categoryMenu__fourthLevel
+                    %li.header__sub__leftBox__list__categoryMenu__fourthLevel--list
+                      = link_to "新品", root_path
+            %li.header__sub__leftBox__list__categoryMenu__secondLevel--list
+              = link_to "レディース", root_path
+              %ul.header__sub__leftBox__list__categoryMenu__thirdLevel
+                %li.header__sub__leftBox__list__categoryMenu__thirdLevel--list
+                  = link_to "パンツ", root_path
+                  %ul.header__sub__leftBox__list__categoryMenu__fourthLevel
+                    %li.header__sub__leftBox__list__categoryMenu__fourthLevel--list
+                      = link_to "新品", root_path
+        %li.header__sub__leftBox__list__brand
+          = link_to "ブランド", root_path
+          %ul.header__sub__leftBox__list__brand__secondLevel
+            %li.header__sub__leftBox__list__brand__secondLevel--list
+              = link_to "レディース", root_path
+            %li.header__sub__leftBox__list__brand__secondLevel--list
+              = link_to "レディース", root_path
+            %li.header__sub__leftBox__list__brand__secondLevel--list
+              = link_to "レディース", root_path
+    .header__sub__rightBox
+      %ul.header__sub__rightBox__list
+        %li.header__sub__rightBox__list--login
+          = link_to "ログイン", root_path
+        %li.header__sub__rightBox__list--registration
+          = link_to "新規会員登録", root_path
+        %li.header__sub__rightBox__list--logout
+          = link_to "ログアウト", root_path
+        %li.header__sub__rightBox__list--myPage
+          = link_to "マイページ", root_path

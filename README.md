@@ -54,6 +54,7 @@ Things you may want to cover:
 |price|integer|null: false|
 |name|string|null: false|
 |description|text|null: false|
+|condition|string|null: false|
 |shipping_cost_side|string|null: false|
 |shipping_method|string|null: false|
 |origin_area|string|null: false|

@@ -1,0 +1,21 @@
+@import "users";
+@import "./_reset";
+@import "./_variable";
+@import "./top.scss";
+@import "./modules/header.scss";
+@import "./modules/footer.scss";
+
+body{
+  margin: 0;
+  padding: 0;
+}
+*{
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+  ul{
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}

@@ -1,3 +1,136 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  background-color: rgb(245,245,245);
+  header{
+    width: 100vw;
+    text-align: center;
+    height: 100px;
+  }
+  .registration-main{
+    background-color: white;
+    width: 750px;
+    margin: 0 auto;
+    &__head{
+      width: 100%;
+      font-size: 25px;
+      line-height: 1.5;
+      text-align: center;
+      height: 100px;
+      line-height: 100px;
+      border-bottom: solid 1px rgb(245,245,245);
+      margin-bottom: 50px;
+    }
+    &__for-sign-up{
+      width: 100%;
+      font-size: 25px;
+      line-height: 1.5;
+      text-align: center;
+      height: 200px;
+      line-height: 100px;
+      border-bottom: solid 1px rgb(245,245,245);
+      margin-bottom: 50px;
+      &__announcement{
+        font-size: 15px;
+        height: 50px;
+        padding-top: 30px;
+      }
+      &__btn{
+        background-color: #0099e8;
+        width: 440px;
+        height: 55px;
+        display: block;
+        line-height: 55px;
+        color: white;
+        margin: 0 auto;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 5px;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+form{
+  text-align: center;
+  .field{
+    font-size: 20px;
+    width: 500px;
+    margin: 0 auto;
+    label{
+      font-weight: bold;
+      float: left;
+      margin-left: 30px;
+    }
+    .form-span{
+      background-color: red;
+      color: white;
+      border-radius: 3px;
+      float: left;
+      margin-left: 20px;
+      font-size: 15px;
+      padding: 3px 5px;
+    }
+  }
+  input{
+    font-size: 20px;
+    height: 60px;
+    width: 400px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    padding-left: 30px;
+  }
+  .actions > input{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    width: 440px;
+  }
+}
+
+footer{
+  text-align: center;
+  padding-bottom: 40px;
+  .footer-small{
+    font-size: 10px;
+  }
+}
+
+.registration-logo{
+  width: 200px;
+  line-height: 100px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+//この後導入する住所登録画面のscssを仮置き
+.form-span-any{
+  background-color: gray;
+  color: white;
+  border-radius: 3px;
+  float: left;
+  margin-left: 20px;
+  font-size: 15px;
+  padding: 3px 5px;
+}
+
+select{
+  font-size: 20px;
+  height: 70px;
+  width: 440px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+}
