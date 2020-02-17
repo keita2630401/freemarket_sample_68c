@@ -101,24 +101,13 @@
       .topMain__box6__contents__subtitle
         %h3.subtitle アーカイバ
       %ul.topMain__box6__contents__cardList
-        %li.topMain__box6__contents__cardList--card
-          = image_tag "/member_photo_noimage_thumb.png", alt: "card", class: "card"
-          %h3.name product3
-          %p.price 50000円
-          %p.likes ✭0
-          %p.tax (税込み)
-        %li.topMain__box6__contents__cardList--card
-          = image_tag "/member_photo_noimage_thumb.png", alt: "card", class: "card"
-          %h3.name product3
-          %p.price 50000円
-          %p.likes ✭0
-          %p.tax (税込み)
-        %li.topMain__box6__contents__cardList--card
-          = image_tag "/member_photo_noimage_thumb.png", alt: "card", class: "card"
-          %h3.name product3
-          %p.price 50000円
-          %p.likes ✭0
-          %p.tax (税込み)
+        - @items.each do |item|
+          %li.topMain__box6__contents__cardList--card
+            = image_tag "/member_photo_noimage_thumb.png", alt: "card", class: "card"
+            %h3.name #{item.name}
+            %p.price #{item.price}円
+            %p.likes ✭0
+            %p.tax (税込み)
   .topMain__box7
     .topMain__box7__contents
       .topMain__box7__contents__subTitle
