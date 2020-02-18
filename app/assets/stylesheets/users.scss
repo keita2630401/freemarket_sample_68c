@@ -52,89 +52,84 @@
       }
     }
   }
-}
-
-form{
-  text-align: center;
-  .field{
-    font-size: 20px;
-    width: 500px;
-    margin: 0 auto;
-    label{
-      font-weight: bold;
-      float: left;
-      margin-left: 30px;
+  form{
+    text-align: center;
+    .field{
+      font-size: 20px;
+      width: 500px;
+      margin: 0 auto;
+      label{
+        font-weight: bold;
+        float: left;
+        margin-left: 30px;
+      }
+      .form-span{
+        background-color: red;
+        color: white;
+        line-height: 25px;
+        border-radius: 3px;
+        float: left;
+        margin-left: 20px;
+        font-size: 15px;
+        padding: 3px 7px;
+      }
+      .form-span-any{
+        background-color: gray;
+        color: white;
+        line-height: 25px;
+        border-radius: 3px;
+        float: left;
+        margin-left: 20px;
+        font-size: 15px;
+        padding: 3px 7px;
+      }
+      select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding-left: 30px;
+        font-size: 20px;
+        height: 70px;
+        width: 440px;
+        border-radius: 5px;
+        margin-bottom: 50px;
+        margin-top: 10px;
+        border-width: 2px;
+        border-style: inset;
+        border-color: initial;
+        border-image: initial;
+        float: initial;
+        }
     }
-    .form-span{
+    input{
+      box-sizing: initial;
+      font-size: 20px;
+      height: 60px;
+      width: 400px;
+      border-radius: 5px;
+      margin-bottom: 50px;
+      margin-top: 10px;
+      padding-left: 30px;
+    }
+    .actions > input{
       background-color: red;
       color: white;
-      border-radius: 3px;
-      float: left;
-      margin-left: 20px;
-      font-size: 15px;
-      padding: 3px 5px;
+      cursor: pointer;
+      width: 440px;
     }
   }
-  input{
-    box-sizing: initial;
-    font-size: 20px;
-    height: 60px;
-    width: 400px;
-    border-radius: 5px;
-    margin-bottom: 50px;
-    margin-top: 10px;
-    padding-left: 30px;
+  
+  footer{
+    text-align: center;
+    padding-bottom: 40px;
+    .footer-small{
+      font-size: 10px;
+    }
   }
-  .actions > input{
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    width: 440px;
+  
+  .registration-logo{
+    width: 200px;
+    line-height: 100px;
+    margin-top: 20px;
   }
-}
-
-footer{
-  text-align: center;
-  padding-bottom: 40px;
-  .footer-small{
-    font-size: 10px;
-  }
-}
-
-.registration-logo{
-  width: 200px;
-  line-height: 100px;
-  margin-top: 20px;
-}
-
-
-
-//この後導入する住所登録画面のscssを仮置き
-.form-span-any{
-  background-color: gray;
-  color: white;
-  border-radius: 3px;
-  float: left;
-  margin-left: 20px;
-  font-size: 15px;
-  padding: 3px 5px;
-}
-
-select{
-  -webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-
-
-  padding-left: 30px;
-  font-size: 20px;
-  height: 70px;
-  width: 440px;
-  border-radius: 5px;
-  margin-bottom: 50px;
-  margin-top: 10px;
-  border-width: 2px;
-  border-style: inset;
-  border-color: initial;
-  border-image: initial;
 }

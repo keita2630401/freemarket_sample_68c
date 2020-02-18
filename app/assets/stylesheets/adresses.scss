@@ -1,3 +1,21 @@
 // Place all the styles related to the adresses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+select{
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+padding-left: 30px;
+font-size: 20px;
+height: 70px;
+width: 440px;
+border-radius: 5px;
+margin-bottom: 50px;
+margin-top: 10px;
+border-width: 2px;
+border-style: inset;
+border-color: initial;
+border-image: initial;
+}
