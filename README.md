@@ -40,10 +40,10 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |post_number|integer|null: false|
-|prefecture|string|null: false|
+|prefecture_id|integer|null: false|
 |municipality|string|null: false|
 |town|string|null: false|
-|building|string|null: false|
+|building|string||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
