@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
+.registration_body{
   background-color: rgb(245,245,245);
   header{
     width: 100vw;
@@ -76,6 +76,7 @@ form{
     }
   }
   input{
+    box-sizing: initial;
     font-size: 20px;
     height: 60px;
     width: 400px;
@@ -108,9 +109,6 @@ footer{
 
 
 
-
-
-
 //この後導入する住所登録画面のscssを仮置き
 .form-span-any{
   background-color: gray;
@@ -123,6 +121,12 @@ footer{
 }
 
 select{
+  -webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+
+
+  padding-left: 30px;
   font-size: 20px;
   height: 70px;
   width: 440px;

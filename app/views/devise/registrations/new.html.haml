@@ -1,35 +1,35 @@
-%header
-  %h1
+.registration_body
+  %header
     = link_to image_tag("/logo.png", class:"registration-logo"), "/"
-.registration-main
-  %h2.registration-main__head
-    会員情報入力
-  = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
-    = render "devise/shared/error_messages", resource: resource
-    .field
-      = f.label :"氏名"
-      %span.form-span 必須
-      %br/
-      = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "例）小野マスター"
-    .field
-      = f.label :"メールアドレス"
-      %span.form-span 必須
-      %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可"
-    .field
-      = f.label :"パスワード"
-      %span.form-span 必須
-      - if @minimum_password_length
+  .registration-main
+    %h2.registration-main__head
+      会員情報入力
+    = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .field
+        = f.label :"氏名"
+        %span.form-span 必須
         %br/
-      = f.password_field :password, autocomplete: "new-password", placeholder: "7文字以上の半角英数字"
-    .field
-      = f.label :"パスワード（確認）"
-      %span.form-span 必須
-      %br/
-      = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "コピペ厳禁"
-    .actions
-      = f.submit "登録"
-%footer
-  = link_to image_tag("/logo.png", class:"registration-logo"), "/"
-  %p.footer-small
-    freemarket_sample_68c
+        = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "例）小野マスター"
+      .field
+        = f.label :"メールアドレス"
+        %span.form-span 必須
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可"
+      .field
+        = f.label :"パスワード"
+        %span.form-span 必須
+        - if @minimum_password_length
+          %br/
+        = f.password_field :password, autocomplete: "new-password", placeholder: "7文字以上の半角英数字"
+      .field
+        = f.label :"パスワード（確認）"
+        %span.form-span 必須
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "コピペ厳禁"
+      .actions
+        = f.submit "住所登録へ"
+  %footer
+    = link_to image_tag("/logo.png", class:"registration-logo"), "/"
+    %p.footer-small
+      freemarket_sample_68c
