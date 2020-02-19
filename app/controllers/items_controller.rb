@@ -15,6 +15,10 @@ class ItemsController < ApplicationController
     else
       render :new
     end
+
+  def purchase
+  end
+
   end
 
   private
