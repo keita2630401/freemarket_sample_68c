@@ -1,0 +1,294 @@
+.header__logo{
+  background-color: whitesmoke;
+  height: 120px;
+  text-align: center;
+  img{
+  width: 185px;
+  height: 49px;
+  margin-top: 38px;
+  }
+}
+.itemsForm{
+  height: 100%;
+  background-color: rgb(245, 245, 245);
+  width: 700px;
+  margin: 0 auto;
+  background-color: white;
+  span{
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+    background: #ea352d;
+  }
+}
+
+
+.exhibition{
+  padding: 40px;
+
+
+.image_upload{
+  position: relative;
+  min-height: 162px;
+  background: #f5f5f5;
+  border: 1px dashed #ccc;
+  font-size: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.drop-file-form{
+  position: absolute;
+  top: 40%;
+  left: 16px;
+  right: 16px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.item__description{
+  padding: 40px;
+  border-top: 1px solid #eee;
+
+  &__name{
+    line-height: center;
+    padding-bottom: 30px;
+  }
+}
+
+.item__details{
+  color: rgb(136, 136, 136);
+    font-size: 16px;
+    line-height: 1.4em;
+    margin-bottom: 24px;
+    padding: 40px;
+    border-top: 1px solid #eee;
+}
+
+.delivery{
+  color: #888888;
+  font-size: 16px;
+  line-height: 1.4em;
+  margin-bottom: 24px;
+  padding: 40px;
+  border-top: 1px solid #eee;
+}
+
+.price{
+  color: #888888;
+  font-size: 16px;
+  line-height: 1.4em;
+  margin-bottom: 24px;
+  padding: 40px;
+  border-top: 1px solid #eee;
+
+  &__selling{
+    float: right;
+  }
+
+  &__selling__form{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+  }
+
+  &__selling__form2{
+    padding-right: 140px;
+  }
+}
+
+.money{
+  display: flex;
+  justify-content: right;
+  &__en{
+    color: black;
+    font-size: 18px;
+  }
+}
+
+.sales{
+  padding-top: inherit;
+  border-top: 1px solid #ccc;
+  padding: 0 0 22px;
+
+  &__commission{
+    color: black;
+    font-size: 16px;
+    padding: 26px 0px;
+  }
+}
+
+.profit{
+  color: black;
+  font-size: 16px;
+  padding-top: 26px;
+  border-top: 1px solid #ccc;
+  padding: 24px 0px 24px;
+  font-weight: bold;
+}
+
+.confirm{
+  text-align: center;
+  padding: 40px;
+}
+
+.footer{
+  background-color: whitesmoke;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 220px;
+  text-align: center;
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+}
+
+.footer__logo{
+  text-align: center;
+  padding: 40px 0;
+}
+
+.footer__logo a{
+  display: block;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  }
+
+.footer__logo small{
+  font-size: 13px;
+}
+
+.var{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.information-head{
+  color: black;
+  text-align: center;
+}
+
+.btn{
+  color: white;
+  background-color: #0095ff;
+  width: 77%;
+  font-size: 17px;
+  min-height: 48px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.btn-default {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  width: 45%;
+  margin: 24px auto 0;
+  line-height: 48px;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+
+.field{
+  margin-top: 16px;
+  height: 157px;
+  width: 600px;
+  font-size: 16px;
+  line-height: 50px;
+  border-color:#ccc;
+  border-radius: 4px;
+}
+
+.area{
+  height: 31px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  width: 80%;
+  margin: 8px 0 0;
+}
+
+.price-area{
+  height: 23px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  width: 86px;
+}
+
+.l-right{
+  float:right;
+}
+
+.p{
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+label{
+  color:black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+li{
+  margin: 0 0 0 16px;
+}
+
+input{
+  height: 30px;
+  width: 80%;
+  font-size: 17px;
+  border-radius: 4px;
+}
+
+textarea{
+  height: 180px;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+select{
+  height: 35px;
+  width: 50%;
+  font-size: 13px;
+  float: right;
+}
+
+.delibery__charge{
+  padding-bottom: 45px;
+}
+
+.delibery__origin{
+  padding-bottom: 45px;
+}
+
+.js-file{
+  // display: none;
+}
+
+.js-file_group{
+  height: 160px;
+}
+}

@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
+  before_action :set_item, except: [:index, :new, :create]
+
   def index
-    @items = Item.all.last(3).reverse
+    @items = Item.includes(:images).last(3).reverse
   end
 
   def new
@@ -21,16 +23,26 @@ class ItemsController < ApplicationController
   end
 
   def update
-  if @item.update(item_params)
-    redirect_to root_path
-  else
-    render :edit
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
-end
+
+  def destroy
+    @item.destroy
+    redirect_to root_path
+  end
 
   private
+    def item_params
+      params.require(:item).permit(:name, :description, :condition_id, :ShippingCostSide_id, :OriginArea_id, :ShippingDays_id, :price, images_attributes: [:image, :_destroy, :id])
 
-  def item_params
-    params.require(:item).permit(:name, :description, :condition_id, :ShippingCostSide_id, :OriginArea_id, :ShippingDays_id, :price, images_attributes: [:image, :_destroy, :id])
-  end
+    end
+
+    def set_item
+      @item = Item.find(params[:id])
+    end
+
 end

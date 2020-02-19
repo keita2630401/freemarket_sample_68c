@@ -76,24 +76,14 @@
       .topMain__box5__contents__subtitle
         %h3.subtitle 新規投稿商品
       %ul.topMain__box5__contents__cardList
-        %li.topMain__box5__contents__cardList--card
-          = image_tag "/member_photo_noimage_thumb.png", alt: "card", class: "card"
-          %h3.name product3
-          %p.price 50000円
-          %p.likes ✭0
-          %p.tax (税込み)
-        %li.topMain__box5__contents__cardList--card
-          = image_tag "/member_photo_noimage_thumb.png", alt: "card", class: "card"
-          %h3.name product3
-          %p.price 50000円
-          %p.likes ✭0
-          %p.tax (税込み)
-        %li.topMain__box5__contents__cardList--card
-          = image_tag "/member_photo_noimage_thumb.png", alt: "card", class: "card"
-          %h3.name product3
-          %p.price 50000円
-          %p.likes ✭0
-          %p.tax (税込み)
+        - @items.each do |item|
+          %li.topMain__box5__contents__cardList--card
+            = link_to image_tag("/member_photo_noimage_thumb.png", alt: "card", class: "card"), edit_item_path(item.id)
+            %h3.name #{item.name}
+            %p.price #{item.price}円
+            %p.likes ✭0
+            %p.tax (税込み)
+
   .topMain__box6
     .topMain__box6__contents
       .topMain__box6__contents__title
@@ -103,7 +93,7 @@
       %ul.topMain__box6__contents__cardList
         - @items.each do |item|
           %li.topMain__box6__contents__cardList--card
-            = image_tag "/member_photo_noimage_thumb.png", alt: "card", class: "card"
+            = link_to image_tag("/member_photo_noimage_thumb.png", alt: "card", class: "card"), edit_item_path(item.id)
             %h3.name #{item.name}
             %p.price #{item.price}円
             %p.likes ✭0

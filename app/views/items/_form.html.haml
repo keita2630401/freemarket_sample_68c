@@ -1,0 +1,45 @@
+.header__logo
+  = link_to image_tag("/logo.png", alt: "フリマ""出品ページ"),root_path
+.itemsForm
+  = form_with model: @item, local: true do |f|
+    #image-box
+      %h2 商品情報を入力
+      #image-box__title
+        %p 出品画像
+        %span 必須
+        %p 最大10枚までアップロードできます。
+        #previews
+          - if @item.persisted?
+            - @item.images.each_with_index do |image, i|
+              = image_tag image.image.url, data: { index: i }, width: "100", height: '100'
+        = f.fields_for :images do |image|
+          .js-file_group{data: {index: image.index}}
+            = image.file_field :image, class: "js-file"
+            %br
+            .js-remove 削除
+          - if @item.persisted?
+            = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
+        - if @item.persisted?
+          .js-file_group{data: {index: @item.images.count}}
+            = file_field_tag :image, name: "item[images_attributes][#{@item.images.count}][image]", class: 'js-file'
+            .js-remove 削除
+
+
+
+
+    .sample__name
+      = f.text_field :name, placeholder: "商品名（必須 40文字まで)"
+    .sample__description
+      = find_and_preserve(f.text_area :description, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。")
+    .sample__condition
+      = f.collection_select :condition_id, Condition.all, :id, :name, prompt: "選択してください"
+    .sample__shippingCostSide
+      = f.collection_select :ShippingCostSide_id, ShippingCostSide.all, :id, :name, prompt: "選択してください"
+    .sample__originArea
+      = f.collection_select :OriginArea_id, Prefecture.all, :id, :name, prompt: "選択してください"
+    .sample__days
+      = f.collection_select :ShippingDays_id, ShippingDays.all, :id, :name, prompt: "選択してください"
+    .sample__price
+      = f.number_field :price, placeholder: "0"
+    .sample_submit
+      = f.submit
