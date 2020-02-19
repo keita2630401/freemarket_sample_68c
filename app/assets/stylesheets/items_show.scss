@@ -1,0 +1,199 @@
+.navbar {
+  background-color: #fff;
+  width: 100%;
+  height: 55px;
+  border-top: 1px solid #eee;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,16);
+  padding: 0 60px;
+  ul {
+    padding: 17px 0 16px;
+    width: 100%;
+    max-width: 1040px;
+    font-size: 14px;
+    margin: auto;
+    display: flex;
+    background-color: rgb(255,255,255);
+    li {
+      padding: 0 10px 0 0;
+    }
+  }
+}
+
+.itemShow {
+  margin: auto;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 1721px;
+  padding: 40px;
+  margin-bottom: 38px;
+
+  &__itemBox {
+    width: 700px;
+    background-color: #fff;
+    margin: auto;
+    padding: 24px 40px 40px;
+
+    &__title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    &__imageBox {
+      margin: auto;
+      width: 620px;
+      height: 443px;
+      ul {
+        display: flex;
+        list-style: none;
+          li {
+          width: 560px;
+          margin: auto;
+            img {
+              width: 100%;
+              height: 346px;
+              object-fit: cover;
+            }
+            ul{
+              height: 87px;
+              width: 560px;
+              margin-top: 10px;
+              li {
+                margin: 0 10px 0 0;
+                width: 25%;
+                img {
+                width: 100%;
+                height: 87px;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__price {
+      margin: 24px 0 24px;
+      text-align: center;
+      span {
+        margin: 0 10px 0 0;
+        font-size: 46px;
+      }
+    }
+    &__priceDetail {
+      text-align: center;
+      margin: -20px 0 33px;
+      span {
+        font-size: 16px;
+      }
+    }
+    &__itemDetail {
+      margin-bottom: 30px;
+      line-height: 1.5;
+      font-size: 18px;
+    }
+    &__tbody {
+      margin-bottom: 20px;
+      table {
+        border: 1px solid #f8f8f8;
+        width: 100%;
+        height: 375px;
+        th {
+          width: 20%;
+          background-color: #eee;
+          font-weight: 400;
+          border: 1px solid #dedede;
+          padding: 8px;
+          font-size: 14px;
+          text-align: center;
+        }
+        td {
+          width: 61%;
+          padding: 15px 15px;
+          border: 1px solid #dedede;
+          font-size: 14px;
+        }
+      }
+    }
+    &__optionalArea {
+        margin: 10px 0 0;
+        display: flex;
+      &__likeBtn {
+        font-size: 14px;
+        margin-right: auto;
+        padding: 6px 10px;
+        border-radius: 40px;
+        color: #3CCACE;
+        border: 1px solid #ffb340;
+      }
+      &__reportBtn {
+        background-color: #fff;
+        font-size: 14px;
+        background-color: transparent;
+        border: none;
+        a {
+          display: inline-block;
+          padding: 6px 10px;
+          border-radius: 4px;
+          color: #333;
+          border: 1px solid #333;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__commentBox {
+    width: 700px;
+    padding: 24px;
+    background-color: #fff;
+    margin: 10px auto;
+    text-align: center;
+    textarea {
+      width: 100%;
+      padding: 10px;
+      min-height: 104px;
+    }
+    .noticeMsg {
+      padding: 8px;
+      font-size: 14px;
+      background-color: #f8f8f8;
+      margin: 10px 0;
+      text-align: left;
+    }
+    &__btn {
+      line-height: 48px;
+      background-color: #3CCACE;
+      border: 1px solid #3CCACE;
+      color: #fff;
+      width: 60%;
+      font-size: 18px;
+      border-radius: 100px;
+      margin-top: 26px;
+    }
+  }
+  &__Go {
+    width: 780px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-right: 40px;
+    li {
+      color: #3CCACE;
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__moreinfor {
+    width: 700px;
+    margin: 24px  auto;
+    a {
+      color: #3CCACE;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 22px;
+      margin: 24px 0 8px;
+    }
+  }
+}
