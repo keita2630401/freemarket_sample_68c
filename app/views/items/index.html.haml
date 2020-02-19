@@ -108,15 +108,4 @@
             %p.price #{item.price}円
             %p.likes ✭0
             %p.tax (税込み)
-  .topMain__box7
-    .topMain__box7__contents
-      .topMain__box7__contents__subTitle
-        %h3.subTitle だれでもかんたん、人生を変えるフリマアプリ
-      .topMain__box7__contents__title
-        %h2.title 今すぐ無料ダウンロード！
-      .topMain__box7__contents__downloadLink
-        = link_to root_path do
-          = image_tag "/google-play-badge.png", alt: "googlePlayリンク", class: "googleImg"
-        = link_to root_path do
-          = image_tag "/App_Store_Badge.png", alt: "appleStoreリンク", class: "appleImg"
 =render  "shared/footer"
