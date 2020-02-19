@@ -1,8 +1,8 @@
 class AdressesController < ApplicationController
-  
+
   def index
   end
-  
+
   def new
     @adress = Adress.new
   end
@@ -15,7 +15,7 @@ class AdressesController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
   end
 
@@ -29,7 +29,7 @@ class AdressesController < ApplicationController
   end
 
   private
-  
+
   def adress_params
     params.require(:adress).permit( user_ids: [] )
   end
