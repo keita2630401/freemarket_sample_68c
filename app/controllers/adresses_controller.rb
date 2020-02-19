@@ -10,7 +10,7 @@ class AdressesController < ApplicationController
   def create
     @adress = Adress.new(adress_params)
     if @adress.save
-      redirect_to root_path
+      render new_card_path
       #ここに登録が完了したことを表示するページへのパスを記述する必要があります
     else
       render :new

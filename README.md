@@ -107,10 +107,8 @@ Things you may want to cover:
 ## cardsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|number|integer|null: false, unique:true|
-|expiration_year|integer|null: false|
-|expiration_month|integer|null: false|
-|csv|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
+|customer_id|string|null: false|
+|card_id|string|null: false|
 ### Association
 - belongs_to :user
