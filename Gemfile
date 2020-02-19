@@ -58,7 +58,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'erb2haml'
-  gem 'haml-rails'
 
 end
 
@@ -84,3 +83,5 @@ gem 'jquery-rails'
 gem 'active_hash'
 gem 'devise'
 gem 'kaminari'
+gem 'haml-rails'
+gem 'font-awesome-sass'

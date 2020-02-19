@@ -1,0 +1,110 @@
+=render "shared/header"
+%nav.navbar
+  %ul
+    %li
+      =link_to "#" do
+        FURIMA
+    %li
+      =link_to "#" do
+        =icon("fas","angle-right")
+    %li
+      =link_to "#" do
+        メンズ
+    %li
+      =link_to "#" do
+        =icon("fas","angle-right")
+    %li
+      = link_to "#" do
+        ジャケット/アウター
+    %li
+      = link_to "#" do
+        =icon("fas","angle-right")
+    %li
+      =link_to "#" do
+        ノーカラージャケット
+    %li
+      =link_to "#" do
+        =icon("fas","angle-right")
+    %li
+      product2
+.itemShow
+  .itemShow__itemBox
+    %h2.itemShow__itemBox__title product2
+    .itemShow__itemBox__imageBox
+      %ul
+        %li
+          = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", alt: "フリマ""商品ページ")
+          %ul
+            %li
+              = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", alt: "フリマ""商品ページ")
+            %li
+              = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/11/a005.png", alt: "フリマ""商品ページ")
+            %li
+              = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/12/a006.png", alt: "フリマ""商品ページ")
+    .itemShow__itemBox__price
+      %span ¥20000
+    .itemShow__itemBox__priceDetail
+      %span (税込)
+      %span 送料込み
+    .itemShow__itemBox__itemDetail product2
+    .itemShow__itemBox__tbody
+      %table
+        %tr
+          %th 出品者
+          %td hoge
+        %tr
+          %th カテゴリー
+          %td
+        %tr
+          %th
+          %td
+        %tr
+          %th ブランド
+          %td
+        %tr
+          %th 商品のサイズ
+          %td
+        %tr
+          %th 商品の状態
+          %td 新品/未使用
+        %tr
+          %th 配送料の負担
+          %td 着払い（購入者負担）
+        %tr
+          %th 発送元の地域
+          %td
+            = link_to '青森県', '＃'
+        %tr
+          %th 発送日の目安
+          %td 1-2日で発送
+    .itemShow__itemBox__optionalArea
+      %button.itemShow__itemBox__optionalArea__likeBtn
+        = icon("fas","star")
+        お気に入り 0
+      %button.itemShow__itemBox__optionalArea__reportBtn
+        = link_to "#" do
+          = icon("fas","flag")
+          不適切な商品の通報
+  .itemShow__commentBox
+    = form_with model: @comment, local: true do |form|
+      = find_and_preserve(form.text_area :text)
+      %p.noticeMsg
+        相手のことを考え丁寧なコメントを心がけましょう。
+        %br
+        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %button.itemShow__commentBox__btn
+        = icon("fas","comment")
+        コメントする
+  %ul.itemShow__Go
+    %li
+      = link_to "#" do
+        =icon("fas","angle-left")
+        %span 前の商品
+    %li
+      = link_to "#" do
+        %span 後ろの商品
+        =icon("fas","angle-right")
+  .itemShow__moreinfor
+    = link_to "#" do
+      メンズをもっと見る
+=render "shared/footer"
