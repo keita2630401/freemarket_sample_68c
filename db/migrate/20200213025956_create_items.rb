@@ -8,6 +8,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer  :OriginArea_id,       null: false
       t.integer :ShippingDays_id,      null: false
       t.integer :price,             null: false
+      t.string :status, default: "exihibiting"
       t.timestamps
     end
   end

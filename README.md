@@ -59,6 +59,7 @@ Things you may want to cover:
 |shipping_method|string|null: false|
 |origin_area|string|null: false|
 |shipping_days|string|null: false|
+|status|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 ### Association
