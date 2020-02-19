@@ -54,11 +54,11 @@ Things you may want to cover:
 |price|integer|null: false|
 |name|string|null: false|
 |description|text|null: false|
-|condition|string|null: false|
-|shipping_cost_side|string|null: false|
-|shipping_method|string|null: false|
-|origin_area|string|null: false|
-|shipping_days|string|null: false|
+|condition_id|integer|null: false|
+|shipping_cost_side_id|integer|null: false|
+|shipping_method_id|integer|null: false|
+|prefecture_id|integer|null: false|
+|shipping_days_id|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 ### Association

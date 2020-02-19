@@ -77,16 +77,16 @@
           .delibery__charge__small
             %label 発送料の負担
             %span 必須
-            = form.collection_select :ShippingCostSide_id, ShippingCostSide.all, :id, :name, prompt: "選択してください"
+            = form.collection_select :shipping_cost_side_id, ShippingCostSide.all, :id, :name, prompt: "選択してください"
         .delibery__origin
           .delibery__origin__small
             %label 発送元の地域
             %span 必須
-            = form.collection_select :OriginArea_id, Prefecture.all, :id, :name, prompt: "選択してください"
+            = form.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "選択してください"
         .delibery__days
           %label 発送までの日数
           %span 必須
-          = form.collection_select :ShippingDays_id, ShippingDays.all, :id, :name, prompt: "選択してください"
+          = form.collection_select :shipping_days_id, ShippingDays.all, :id, :name, prompt: "選択してください"
       .price
         %p 価格（¥300〜9,999,999)
         .price__selling

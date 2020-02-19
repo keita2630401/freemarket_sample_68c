@@ -26,10 +26,10 @@
       =link_to "#" do
         =icon("fas","angle-right")
     %li
-      product2
+      #{@item.name}
 .itemShow
   .itemShow__itemBox
-    %h2.itemShow__itemBox__title product2
+    %h2.itemShow__itemBox__title #{@item.name}
     .itemShow__itemBox__imageBox
       %ul
         %li
@@ -42,11 +42,11 @@
             %li
               = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/12/a006.png", alt: "フリマ""商品ページ")
     .itemShow__itemBox__price
-      %span ¥20000
+      %span #{@item.price}
     .itemShow__itemBox__priceDetail
       %span (税込)
       %span 送料込み
-    .itemShow__itemBox__itemDetail product2
+    .itemShow__itemBox__itemDetail #{@item.name}
     .itemShow__itemBox__tbody
       %table
         %tr
@@ -66,17 +66,16 @@
           %td
         %tr
           %th 商品の状態
-          %td 新品/未使用
+          %td #{@item.condition.name}
         %tr
           %th 配送料の負担
-          %td 着払い（購入者負担）
+          %td #{@item.shipping_cost_side.name}
         %tr
           %th 発送元の地域
-          %td
-            = link_to '青森県', '＃'
+          %td #{@item.prefecture.name}
         %tr
           %th 発送日の目安
-          %td 1-2日で発送
+          %td #{@item.shipping_days.name}
     .itemShow__itemBox__optionalArea
       %button.itemShow__itemBox__optionalArea__likeBtn
         = icon("fas","star")
