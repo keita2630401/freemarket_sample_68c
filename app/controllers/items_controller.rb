@@ -3,6 +3,9 @@ class ItemsController < ApplicationController
     @items = Item.all.last(3).reverse
   end
 
+  def show
+  end
+
   def new
     @item = Item.new
     @item.images.new
