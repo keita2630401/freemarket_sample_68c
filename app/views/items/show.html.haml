@@ -42,7 +42,7 @@
             %li
               = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/12/a006.png", alt: "フリマ""商品ページ")
     .itemShow__itemBox__price
-      %span #{@item.price}
+      %span ¥#{@item.price}
     .itemShow__itemBox__priceDetail
       %span (税込)
       %span 送料込み
@@ -76,6 +76,18 @@
         %tr
           %th 発送日の目安
           %td #{@item.shipping_days.name}
+    .itemShow__itemBox__Btnlist
+    - if current_user.id == @item.user_id
+      %button.itemShow__itemBox__Btnlist__editBtn
+        = link_to edit_item_path do
+          商品の編集
+      %button.itemShow__itemBox__Btnlist__deleteBtn
+        = link_to "#" do
+          この商品の削除
+    - else
+      %button.itemShow__itemBox__Btnlist__buyBtn
+        = link_to "#" do
+          購入画面に進む
     .itemShow__itemBox__optionalArea
       %button.itemShow__itemBox__optionalArea__likeBtn
         = icon("fas","star")
@@ -96,11 +108,16 @@
         コメントする
   %ul.itemShow__Go
     %li
-      = link_to "#" do
-        =icon("fas","angle-left")
-        %span 前の商品
+      -if (@item.id - 1 > 0)
+        = link_to item_path(@item.id-1) do
+          =icon("fas","angle-left")
+          %span 前の商品
+      -else
+        = link_to item_path(@item.id) do
+          =icon("fas","angle-left")
+          %span 前の商品
     %li
-      = link_to "#" do
+      = link_to item_path(@item.id+1) do
         %span 後ろの商品
         =icon("fas","angle-right")
   .itemShow__moreinfor

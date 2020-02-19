@@ -114,6 +114,20 @@
         }
       }
     }
+    &__boxSequence {
+      &__editBtn{
+        background-color: red;
+        a{
+          color: #fff;
+        }
+      }
+      &__deleteBtn {
+        background-color: #3CCACE;
+        a{
+          color: #fff;
+        }
+      }
+    }
     &__optionalArea {
         margin: 10px 0 0;
         display: flex;
