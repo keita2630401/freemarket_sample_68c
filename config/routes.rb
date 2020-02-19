@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   }
   root  'items#index'
   resources :adresses, only: [:index, :new, :create, :edit, :update]
-  resources :items, only: [:new, :create, :edit, :update]
+  resources :items, only: [:new, :create,:show, :edit, :update]
 end

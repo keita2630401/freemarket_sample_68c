@@ -1,4 +1,15 @@
 .footer
+  .footer__box
+    .footer__box__contents
+      .footer__box__contents__subTitle
+        %h3.subTitle だれでもかんたん、人生を変えるフリマアプリ
+      .footer__box__contents__title
+        %h2.title 今すぐ無料ダウンロード！
+      .footer__box__contents__downloadLink
+        = link_to root_path do
+          = image_tag "/google-play-badge.png", alt: "googlePlayリンク", class: "googleImg"
+        = link_to root_path do
+          = image_tag "/App_Store_Badge.png", alt: "appleStoreリンク", class: "appleImg"
   %ul.footer__contents
     %li.footer__contents__box
       %h2.footer__contents__box__title FURIMAについて
