@@ -1,0 +1,39 @@
+.registration_body
+  %header
+    = link_to image_tag("/logo.png", class:"registration-logo"), "/"
+  .adress-new
+    .registration-main
+      %h2.registration-main__head
+        住所登録
+      = form_with model: @adress, action:"/adresses/create", local: true do |f|
+        .field
+          = f.label :"郵便番号"
+          %span.form-span 必須
+          %br/
+          = f.text_field :post_number, autofocus: true, autocomplete: "post_number", placeholder: "例）1234567"
+        .field
+          = f.label :"都道府県"
+          %span.form-span 必須
+          %br/
+          = f.collection_select :prefecture_id, Prefecture.all, :id, :name, autocomplete: "prefecture_id", :prompt => "--"
+        .field
+          = f.label :"市区町村"
+          %span.form-span 必須
+          %br/
+          = f.text_field :municipality, autocomplete: "municipality", placeholder: "例）横浜市緑区"
+        .field
+          = f.label :"番地"
+          %span.form-span 必須
+          %br/
+          = f.text_field :town, autocomplete: "town", placeholder: "例）青山1-1-1"
+        .field
+          = f.label :"マンション名"
+          %span.form-span-any 任意
+          %br/
+          = f.text_field :building, autocomplete: "building", placeholder: "例）柳ビル103"
+        .actions
+          = f.submit "登録する"
+  %footer
+    = link_to image_tag("/logo.png", class:"registration-logo"), "/"
+    %p.footer-small
+      freemarket_sample_68c

@@ -1,20 +1,20 @@
-%header
-  %h1
+.registration_body
+  %header
     = link_to image_tag("/logo.png", class:"registration-logo"), "/"
-.registration-main
-  .registration-main__for-sign-up
-    %p.registration-main__for-sign-up__announcement
-      アカウントをお持ちでない方はこちら
-      %br/
-    = link_to "新規会員登録", new_user_registration_path, class:"registration-main__for-sign-up__btn"
-  = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
-    .field
-      = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
-    .field
-      = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード"
-    .actions
-      = f.submit "ログイン"
-%footer
-  = link_to image_tag("/logo.png", class:"registration-logo"), "/"
-  %p.footer-small
-    freemarket_sample_68c
+  .registration-main
+    .registration-main__for-sign-up
+      %p.registration-main__for-sign-up__announcement
+        アカウントをお持ちでない方はこちら
+        %br/
+      = link_to "新規会員登録", new_user_registration_path, class:"registration-main__for-sign-up__btn"
+    = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
+      .field
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
+      .field
+        = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード"
+      .actions
+        = f.submit "ログイン"
+  %footer
+    = link_to image_tag("/logo.png", class:"registration-logo"), "/"
+    %p.footer-small
+      freemarket_sample_68c

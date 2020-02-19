@@ -49,11 +49,12 @@ Things you may want to cover:
 |family_name_kana|string|null: false|
 |first_name_kana|string|null: false|
 |post_number|integer|null: false|
-|prefecture|string|null: false|
+|prefecture_id|integer|null: false|
 |municipality|string|null: false|
 |town|string|null: false|
 |building|string|null: false|
 |telphone_number|integer|---|
+|building|string||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
@@ -69,6 +70,7 @@ Things you may want to cover:
 |shipping_method|string|null: false|
 |origin_area|string|null: false|
 |shipping_days|string|null: false|
+|status|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 ### Association
