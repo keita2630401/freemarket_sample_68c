@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   get "/purchase",to: "items#purchase"
   resources :adresses, only: [:index, :new, :create, :edit, :update]
   resources :users, only: [:index]
+  resources :items
   get 'users/logout', to: 'users#logout'
   get 'users/card',   to: 'users#card'
   get 'users/create', to: 'users#create'
 end
-  resources :items
-end
+

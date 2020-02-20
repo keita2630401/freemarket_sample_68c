@@ -12,6 +12,7 @@
     padding: 10px;
   }
   .content__credit-card__inner {
+    text-align: center;
     form input {
       font-size: 15px;
       width: 340px;
@@ -27,6 +28,7 @@
       font-weight: bold;
       color: #333333;
       margin-right: 220px;
+      margin-bottom: 20px;
       span {
         background-color: #FF3333;
         color: $mainWhite;
@@ -37,7 +39,6 @@
     }
     .card-list {
       margin-right: 50px;
-      margin-top: 0px;
     }
     .cards-expire {
       .cards-expire__wrap__box {

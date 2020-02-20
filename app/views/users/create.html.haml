@@ -23,9 +23,8 @@
               %span 必須
             .content__credit-card__inner__text_field
               = f.text_field :card_number, type: 'text', class: 'input-number', placeholder: '半角数字のみ', maxlength: "16"
-            %ul.card-list
-              %li
-                %img{alt: "カード", height: "50", src: "https://www.city.tsukubamirai.lg.jp/manage/contents/upload/5d49214a37cae.jpg", width: "300"}
+            .card-list
+              = image_tag 'https://www.city.tsukubamirai.lg.jp/manage/contents/upload/5d49214a37cae.jpg', size: '300x50', alt: 'カード'
             .cards-expire
               .content__credit-card__inner__label
                 = f.label :有効期限, class: 'label'
