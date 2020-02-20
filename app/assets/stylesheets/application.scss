@@ -1,9 +1,17 @@
 @import "users";
 @import "./_reset";
 @import "./_variable";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "./top.scss";
+@import "./users/index";
+@import "./users/_download";
+@import "./users/logout";
+@import "./users/card";
+@import "./users/create";
 @import "./modules/header.scss";
 @import "./modules/footer.scss";
+
 
 body{
   margin: 0;
