@@ -1,10 +1,10 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only:[:show, :destroy, :edit, :update]
   def index
     @items = Item.all.last(3).reverse
   end
 
   def show
-    @item = Item.find(params[:id])
     @items = Item.all
   end
 
@@ -23,7 +23,6 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    item = Item.find(params[:id])
     item.destroy
     redirect_to root_path
   end
@@ -33,11 +32,9 @@ class ItemsController < ApplicationController
 
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
     if @item.update(item_params)
       redirect_to root_path
     else
@@ -52,5 +49,6 @@ class ItemsController < ApplicationController
   end
 
   def set_item
+    @item = Item.find(params[:id])
   end
 end
