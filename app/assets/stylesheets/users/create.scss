@@ -1,0 +1,80 @@
+.card__input {
+  margin-top: 15px;
+  margin-left: 50px;
+  width: 700px;
+  height: 600px;
+  background-color: $mainWhite;
+  .content__title {
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+    border-bottom: 2px solid #eeeeee;
+    padding: 10px;
+  }
+  .content__credit-card__inner {
+    form input {
+      font-size: 15px;
+      width: 340px;
+      height: 45px;
+      border: 1px solid $border;
+      border-radius: 5px;
+      padding-left: 30px;
+      margin-bottom: 0px;
+    }
+    padding-top: 35px;
+    &__label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333333;
+      margin-right: 220px;
+      span {
+        background-color: #FF3333;
+        color: $mainWhite;
+        border-radius: 3px;
+        padding: 4px;
+        font-size: 13px;
+      }
+    }
+    .card-list {
+      margin-right: 50px;
+      margin-top: 0px;
+    }
+    .cards-expire {
+      .cards-expire__wrap__box {
+        display: flex;
+        margin-left: 185px;
+        .cards-expire__wrap {
+          color:#333333;
+          .input-expire {
+            height: 50px;
+            width: 130px;
+            border-radius: 5px;
+            border-width: 2px;
+            border: 1px solid $border;
+            background-color: $mainWhite;
+            margin-right: 10px;
+            color: #888888;
+          }
+          .expire-text {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .content__credit-card__inner__label.selected {
+      margin-left: 60px;
+    }
+    .content-bottom {
+      margin-top: 35px;
+      .content-bottom--add-btn {
+        background-color: #FF3333;
+        color: $mainWhite;
+        padding-right: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+  
