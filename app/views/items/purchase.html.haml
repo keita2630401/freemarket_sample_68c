@@ -1,0 +1,69 @@
+.overall
+  %main.content
+    .header__logo
+      %a
+      = link_to image_tag("/logo.png", alt: "フリマ""出品ページ"),root_path
+    .item__information
+      %h2.single-head 購入内容の確認
+    %section.buy-content
+      .buy-content__inner
+        .buy-content__inner--imagebox
+          %h3.buy-image
+            = link_to image_tag("/スニーカー.jpeg", alt: "購入する商品"),"#"
+          .buy-detail
+            %p.buy-detail__name コンバーススニーカー
+            %p.buy-detail__price
+              %span ¥1000
+              -# 支払い金額の表示
+              %span.fee （税込）送料込み
+    %section.buy-item
+      .buy-item__form
+        .form
+          %ul.price-table
+            %li.price-table__pay
+              .price-table__pay--payment 支払い金額
+              .price-table__pay--call
+                %span ¥1,000
+                -# 支払い金額の表示
+          %ul.buy-point
+            %li.buy-point__name
+              .buy-point__name--checkbox
+                %input{type: "checkbox", class: "checkbox"}
+                %i.icon-check
+                %label ポイントを使用 (所持ポイント: P0)
+          %section.buy-payment
+            .buy-payment__inner
+              %h3 支払い方法
+              %a
+                %p.buy-payment__inner--register
+                  = icon('fas', 'plus-circle')
+                  %span 登録してください
+          %section.delivery-address
+            .delivery-address__content
+              .delivery-address__content--change
+                %h3.left 配送先
+                %a 〒000-0000 東京都 渋谷区 ○○町 111-1
+                %span 変更する
+              %address.buy-user-text
+                %p
+                  -# 登録した配送先住所
+          %section.buy-user-info
+            %button.buy-btn{type: "submit"} 購入する
+            /= form_tag(action: :pay, method: :post) do
+            /  %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => "pk_test_d6add0a50dea2eaa6e89d3d8"}
+  %footer.footer__logo
+    %nav
+      %ul.var
+        %li
+          %a
+            = link_to 'プライバシーポリシー', root_path
+        %li
+          %a
+            = link_to 'フリマ利用規約', root_path
+        %li
+          %a
+            = link_to '特定商取引に関する表記', root_path
+      %a
+        = link_to image_tag("/logo-white.png", alt: "フリマ"),root_path
+      %p
+        %small © Furima, Inc.

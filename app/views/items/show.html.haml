@@ -1,0 +1,128 @@
+=render "shared/header"
+%nav.navbar
+  %ul
+    %li
+      =link_to root_path do
+        FURIMA
+    %li
+      =icon("fas","angle-right")
+    %li
+      =link_to "#" do
+        メンズ
+    %li
+      =icon("fas","angle-right")
+    %li
+      = link_to "#" do
+        ジャケット/アウター
+    %li
+      =icon("fas","angle-right")
+    %li
+      =link_to "#" do
+        ノーカラージャケット
+    %li
+      =icon("fas","angle-right")
+    %li
+      #{@item.name}
+.itemShow
+  .itemShow__itemBox
+    %h2.itemShow__itemBox__title #{@item.name}
+    .itemShow__itemBox__imageBox
+      %ul
+        %li
+          = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", alt: "フリマ""商品ページ")
+          %ul
+            %li
+              = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", alt: "フリマ""商品ページ")
+            %li
+              = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/11/a005.png", alt: "フリマ""商品ページ")
+            %li
+              = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/12/a006.png", alt: "フリマ""商品ページ")
+    .itemShow__itemBox__price
+      %span ¥#{@item.price}
+    .itemShow__itemBox__priceDetail
+      %span (税込)
+      %span 送料込み
+    .itemShow__itemBox__itemDetail #{@item.name}
+    .itemShow__itemBox__tbody
+      %table
+        %tr
+          %th 出品者
+          %td hoge
+        %tr
+          %th カテゴリー
+          %td
+        %tr
+          %th
+          %td
+        %tr
+          %th ブランド
+          %td
+        %tr
+          %th 商品のサイズ
+          %td
+        %tr
+          %th 商品の状態
+          %td #{@item.condition.name}
+        %tr
+          %th 配送料の負担
+          %td #{@item.shipping_cost_side.name}
+        %tr
+          %th 発送元の地域
+          %td #{@item.prefecture.name}
+        %tr
+          %th 発送日の目安
+          %td #{@item.shipping_days.name}
+    - if current_user.id == @item.user_id
+      .itemShow__itemBox__Btnlist
+        %button.itemShow__itemBox__Btnlist__editBtn
+          = link_to edit_item_path do
+            商品の編集
+        %button.itemShow__itemBox__Btnlist__deleteBtn
+          = link_to item_path(@item.id), method: :delete do
+            この商品の削除
+    - else
+      .itemShow__itemBox__Btnlist
+        %button.itemShow__itemBox__Btnlist__buyBtn
+          = link_to "#" do
+            購入画面に進む
+    .itemShow__itemBox__optionalArea
+      %button.itemShow__itemBox__optionalArea__likeBtn
+        = icon("fas","star")
+        お気に入り 0
+      %button.itemShow__itemBox__optionalArea__reportBtn
+        = link_to "#" do
+          = icon("fas","flag")
+          不適切な商品の通報
+  .itemShow__commentBox
+    = form_with model: @comment, local: true do |form|
+      = find_and_preserve(form.text_area :text)
+      %p.noticeMsg
+        相手のことを考え丁寧なコメントを心がけましょう。
+        %br
+        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %button.itemShow__commentBox__btn
+        = icon("fas","comment")
+        コメントする
+  %ul.itemShow__Go
+    %li
+      -if (@item.id - 1 > 0)
+        = link_to item_path(@item.id-1) do
+          =icon("fas","angle-left")
+          %span 前の商品
+      -else
+        = link_to item_path(@item.id) do
+          =icon("fas","angle-left")
+          %span 前の商品
+    %li
+      -if (@item.id+1 <= @items.length)
+        = link_to item_path(@item.id+1) do
+          %span 後ろの商品
+          =icon("fas","angle-right")
+      -else
+        = link_to item_path(@item.id) do
+          %span 後ろの商品
+          =icon("fas","angle-right")
+  .itemShow__moreinfor
+    = link_to "#" do
+      メンズをもっと見る
+=render "shared/footer"
