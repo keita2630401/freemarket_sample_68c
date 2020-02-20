@@ -5,8 +5,9 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations'
   }
   root  'items#index'
+  get "/purchase",to: "items#purchase"
   resources :adresses, only: [:index, :new, :create, :edit, :update]
-  resources :items ,only: [:show, :new, :create] do
+  resources :items do
     resources :purchase, only: [:index] do
       collection do
         get 'index', to: 'purchase#index'

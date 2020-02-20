@@ -9,6 +9,11 @@ class User < ApplicationRecord
   has_many :comments,   :dependent => :delete_all
   has_many :likes,      :dependent => :delete_all
 
-  validates :name, presence: true
+  validates :nickname, presence: true
+  validates :family_name, presence: true
+  validates :first_name, presence: true
+  validates :family_name_kana, presence: true
+  validates :first_name_kana, presence: true
+  validates :birthday, presence: true
   validates :encrypted_password, length: { minimum: 7 }
 end

@@ -13,11 +13,16 @@
 ActiveRecord::Schema.define(version: 2020_02_20_055907) do
 
   create_table "adresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "family_name", null: false
+    t.string "first_name", null: false
+    t.string "family_name_kana", null: false
+    t.string "first_name_kana", null: false
     t.integer "post_number", null: false
     t.integer "prefecture_id", null: false
     t.string "municipality", null: false
     t.string "town", null: false
     t.string "building"
+    t.integer "telephone_number"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -43,10 +48,12 @@ ActiveRecord::Schema.define(version: 2020_02_20_055907) do
     t.string "name", null: false
     t.text "description", null: false
     t.integer "condition_id", null: false
-    t.integer "ShippingCostSide_id", null: false
-    t.integer "OriginArea_id", null: false
-    t.integer "ShippingDays_id", null: false
+    t.integer "shipping_cost_side_id", null: false
+    t.integer "prefecture_id", null: false
+    t.integer "shipping_days_id", null: false
     t.integer "price", null: false
+    t.integer "user_id", null: false
+    t.string "status", default: "exihibiting"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status"
