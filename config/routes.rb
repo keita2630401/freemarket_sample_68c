@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root  'items#index'
   get "/purchase",to: "items#purchase"
   resources :adresses, only: [:index, :new, :create, :edit, :update]
-  resources :items, :except => :index
+  resources :items
 end
