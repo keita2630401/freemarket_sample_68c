@@ -1,0 +1,130 @@
+.header_sub {
+  color: #333333;
+  height: 49px;
+  width: 100%;
+  line-height: 49px;
+  padding-left: 100px;
+  border-top: 1px solid $border;
+  box-shadow: 0px 3px 3px 0 gray;
+  position: absolute; 
+  .link_edit {
+    color: #666666;
+  }
+}
+
+
+.MyPage {
+  background-color: #eeeeee;
+  position: relative;
+  top: 55px;
+  .MyPage__linkbox {
+    height: 50px;
+    width: 280px;
+    border: 1px solid $border;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: $mainWhite;
+    color: #666666;
+    cursor: pointer;
+    &__right {
+      width: 30px;
+      padding-left: 20px;
+      font-size: 17px;
+    }
+  }
+  
+  &__box {
+    display: flex;
+    padding: 70px 170px;
+    &__left {
+      &--box1 {
+        margin-bottom: 40px;
+      }
+      &--box2 {
+        .MyPage__box__left--box2__selected {
+          padding-bottom: 5px;
+          font-size: 17px;
+          font-weight: bold;
+        }
+      }
+    }
+    &__right {
+      margin-left: 45px;
+      &__box {
+        border: 1px solid $border;
+        margin-top: 15px;
+        width: 700px;
+        background-color: $mainWhite;
+        &__top {
+          height: 190px;
+          text-align: center;
+          background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSBanXhzM3rtDmCuwq4DhBfKkwn6cbrSmIRe7FSyWuawU2oY34z);
+          background-size: cover;
+          &__profile {
+            width: 200px;
+            display: inline-block;
+            margin-top: 23px;
+            &--icon {
+            }
+            &--name {
+              padding-top: 10px;
+            }
+            &--count {
+              display: flex;
+              &__evaluation {
+              }
+              &__exhibition {
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+        &__bottom {
+          height: 360px;
+          &--title {
+            height: 65px;
+            line-height: 65px;
+            font-weight: bold;
+            padding-left: 20px;
+          }
+          &--product {
+            &__log {
+              display: flex;
+              width: 100%;
+              height: 70px;
+              line-height: 70px;
+              margin: 0;              
+              padding: 0;
+              color: #444444;
+              font-weight: bold;
+              cursor: pointer;
+              &--left {
+                width: 50%;
+                text-align: center;
+                border-top: 2px solid red;
+              }
+              &--right {
+                width: 50%;
+                text-align: center;
+                background-color: #eeeeee;
+              }
+            }
+          }
+          &__view {
+            text-align: center;
+            &__box {
+              padding-top: 100px;
+              color: #666666;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
