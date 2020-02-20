@@ -2,29 +2,25 @@
 %nav.navbar
   %ul
     %li
-      =link_to "#" do
+      =link_to root_path do
         FURIMA
     %li
-      =link_to "#" do
-        =icon("fas","angle-right")
+      =icon("fas","angle-right")
     %li
       =link_to "#" do
         メンズ
     %li
-      =link_to "#" do
-        =icon("fas","angle-right")
+      =icon("fas","angle-right")
     %li
       = link_to "#" do
         ジャケット/アウター
     %li
-      = link_to "#" do
-        =icon("fas","angle-right")
+      =icon("fas","angle-right")
     %li
       =link_to "#" do
         ノーカラージャケット
     %li
-      =link_to "#" do
-        =icon("fas","angle-right")
+      =icon("fas","angle-right")
     %li
       #{@item.name}
 .itemShow
@@ -118,7 +114,7 @@
           =icon("fas","angle-left")
           %span 前の商品
     %li
-      -if ((@item.id + 1).blank?)
+      -if (@item.id+1 <= @items.length)
         = link_to item_path(@item.id+1) do
           %span 後ろの商品
           =icon("fas","angle-right")
