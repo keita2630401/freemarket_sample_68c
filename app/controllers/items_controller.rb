@@ -1,13 +1,13 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.includes(:images).last(3).reverse
+    @items = Item.all.last(3).where(status: 'exihibiting').includes(:user).reserve
   end
 
   def show
     @item = Item.find(params[:id])
     @items = Item.all
   end
-
+  
   def new
     @item = Item.new
     @item.images.new
@@ -21,6 +21,10 @@ class ItemsController < ApplicationController
       render :new
     end
   end
+  
+  def purchase
+  end
+
 
   def edit
     @item = Item.find(params[:id])

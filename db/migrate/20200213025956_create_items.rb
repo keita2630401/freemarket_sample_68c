@@ -9,6 +9,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer :shipping_days_id,      null: false
       t.integer :price,             null: false
       t.integer :user_id,          null: false
+      t.string :status, default: "exihibiting"
       t.timestamps
     end
   end
