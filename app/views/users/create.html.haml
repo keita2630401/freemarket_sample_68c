@@ -3,10 +3,12 @@
   = link_to root_path, class: "link_edit" do
     フリマ 
   = link_to users_path, class: "link_edit" do
-    > マイページ
+    = icon('fa', 'chevron-right', class: "header_sub_icon") 
+    マイページ
   = link_to users_card_path, class: "link_edit" do
     支払い方法
-  > クレジットカード情報入力
+  = icon('fa', 'chevron-right', class: "header_sub_icon") 
+  クレジットカード情報入力
 .MyPage
   .MyPage__box
     = render "left"

@@ -3,8 +3,10 @@
   = link_to root_path, class: "link_edit" do
     フリマ 
   = link_to users_path, class: "link_edit" do
-    > マイページ
-  > ログアウト
+    = icon('fa', 'chevron-right', class: "header_sub_icon") 
+    マイページ
+  = icon('fa', 'chevron-right', class: "header_sub_icon") 
+  ログアウト
 .MyPage
   .MyPage__box
     = render "left"
