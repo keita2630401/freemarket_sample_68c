@@ -26,7 +26,12 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|nickname|string|null: false|
+|family_name|string|null: false|
+|first_name|string|null: false|
+|family_name_kana|string|null: false|
+|first_name_kana|string|null: false|
+|birthday|date|null: false|
 |email|string|null: false, unique:true|
 |password|string|null: false|
 ### Association
@@ -39,11 +44,17 @@ Things you may want to cover:
 ## addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
+|family_name|string|null: false|
+|first_name|string|null: false|
+|family_name_kana|string|null: false|
+|first_name_kana|string|null: false|
 |post_number|integer|null: false|
-|prefecture|string|null: false|
+|prefecture_id|integer|null: false|
 |municipality|string|null: false|
 |town|string|null: false|
 |building|string|null: false|
+|telphone_number|integer|---|
+|building|string||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
@@ -54,11 +65,11 @@ Things you may want to cover:
 |price|integer|null: false|
 |name|string|null: false|
 |description|text|null: false|
-|condition|string|null: false|
-|shipping_cost_side|string|null: false|
-|shipping_method|string|null: false|
-|origin_area|string|null: false|
-|shipping_days|string|null: false|
+|condition_id|integer|null: false|
+|shipping_cost_side_id|integer|null: false|
+|shipping_method_id|integer|null: false|
+|prefecture_id|integer|null: false|
+|shipping_days_id|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 ### Association

@@ -1,4 +1,5 @@
 @import "users";
+@import "adresses";
 @import "./_reset";
 @import "./_variable";
 @import "font-awesome-sprockets";
@@ -9,8 +10,11 @@
 @import "./users/logout";
 @import "./users/card";
 @import "./users/create";
+@import "./items.scss";
 @import "./modules/header.scss";
 @import "./modules/footer.scss";
+@import "./modules/purchase.scss";
+@import "./items_show.scss";
 
 
 body{
