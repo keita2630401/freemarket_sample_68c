@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :items
   resources :cards, only: [:new, :create]
   get 'users/logout', to: 'users#logout'
+  get '/cards', to: 'cards#create'
 end
 
