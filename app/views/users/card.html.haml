@@ -1,0 +1,30 @@
+= render "shared/header"
+.header_sub
+  = link_to root_path, class: "link_edit" do
+    フリマ 
+  = link_to users_path, class: "link_edit" do
+    > マイページ
+  > 支払い方法
+.MyPage
+  .MyPage__box
+    = render "left"
+    .card__content
+      .card__content--top
+        支払い方法
+      .card__content--middle
+        .card__content--middle--title
+          クレジットカード一覧
+        .card__content--middle--button
+          = link_to users_create_path  do
+            %button#add_card_btn{type: "button"}
+              .add_card_btn 
+                .add_card_btn__icon
+                  = icon('fa', 'credit-card')
+                .add_card_btn__text
+                  クレジットカードを追加する
+        .card__content--middle--line
+      = link_to root_path do
+        .card__content--bottom
+          支払い方法について
+= render "download"
+= render "shared/footer"
