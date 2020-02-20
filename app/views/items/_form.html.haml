@@ -1,9 +1,9 @@
 .header__logo
   = link_to image_tag("/logo.png", alt: "フリマ""出品ページ"),root_path
 .itemsForm
+  %h2 商品情報を入力
   = form_with model: @item, local: true do |f|
     #image-box
-      %h2 商品情報を入力
       #image-box__title
         %p 出品画像
         %span 必須
@@ -27,19 +27,54 @@
 
 
 
-    .sample__name
-      = f.text_field :name, placeholder: "商品名（必須 40文字まで)"
-    .sample__description
-      = find_and_preserve(f.text_area :description, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。")
-    .sample__condition
+    .itemsForm__nameBox
+      .itemsForm__nameBox__title
+        %p
+          商品名
+          %span 必須
+      .itemsForm__nameBox__form
+        = f.text_field :name, placeholder: "商品名（必須 40文字まで)"
+    .itemsForm__descriptionBox
+      .itemsForm__descriptionBox__title
+        %p
+          商品詳細
+          %span 必須
+      .itemsForm__descriptionBox__form
+        = find_and_preserve(f.text_area :description, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。")
+    .itemsForm__categoryBox
+      .itemsForm__categoryBox__title
+        %p
+          カテゴリー
+          %span 必須
+      .itemsForm__categoryBox__form
+        %textarea.area
+    .itemsForm__brandBox
+      .itemsForm__brandBox__title
+        %p
+          ブランド
+          %span 任意
+      .itemsForm__brandBox__form
+        %textarea.area
+
+    .itemsForm__statusBox__title
+      %p
+        商品の状態
+        %span 任意
+    .itemsForm__statusBox__form
       = f.collection_select :condition_id, Condition.all, :id, :name, prompt: "選択してください"
-    .sample__shippingCostSide
+
+
+    .itemsForm__conditionBox
+      .itemsForm__conditionBox__title
+      .itemsForm__conditionBox__form
+        = f.collection_select :condition_id, Condition.all, :id, :name, prompt: "選択してください"
+    .itemsForm__shippingCostSide
       = f.collection_select :ShippingCostSide_id, ShippingCostSide.all, :id, :name, prompt: "選択してください"
-    .sample__originArea
+    .itemsForm__originArea
       = f.collection_select :OriginArea_id, Prefecture.all, :id, :name, prompt: "選択してください"
-    .sample__days
+    .itemsForm__days
       = f.collection_select :ShippingDays_id, ShippingDays.all, :id, :name, prompt: "選択してください"
-    .sample__price
+    .itemsForm__price
       = f.number_field :price, placeholder: "0"
-    .sample_submit
+    .itemsForm_submit
       = f.submit

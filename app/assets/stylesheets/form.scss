@@ -23,11 +23,28 @@
     vertical-align: top;
     background: #ea352d;
   }
+
+  &__nameBox{
+    padding: 40px;
+    border-top: 1px solid #eee;
+    &__title{
+      line-height: center;
+      padding-bottom: 30px;
+    }
+  }
+.item__details{
+  color: rgb(136, 136, 136);
+    font-size: 16px;
+    line-height: 1.4em;
+    margin-bottom: 24px;
+    padding: 40px;
+    border-top: 1px solid #eee;
 }
 
 
-.exhibition{
-  padding: 40px;
+
+
+
 
 
 .image_upload{
@@ -50,24 +67,9 @@
   line-height: 1.5;
 }
 
-.item__description{
-  padding: 40px;
-  border-top: 1px solid #eee;
 
-  &__name{
-    line-height: center;
-    padding-bottom: 30px;
-  }
-}
 
-.item__details{
-  color: rgb(136, 136, 136);
-    font-size: 16px;
-    line-height: 1.4em;
-    margin-bottom: 24px;
-    padding: 40px;
-    border-top: 1px solid #eee;
-}
+
 
 .delivery{
   color: #888888;
