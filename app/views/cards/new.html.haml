@@ -1,4 +1,4 @@
-= render "shared/header"
+= render "/shared/header"
 .header_sub
   = link_to root_path, class: "link_edit" do
     フリマ 
@@ -9,7 +9,7 @@
   支払い方法
 .MyPage
   .MyPage__box
-    = render "left"
+    = render "users/left"
     .card__content
       .card__content--top
         支払い方法
@@ -17,7 +17,7 @@
         .card__content--middle--title
           クレジットカード一覧
         .card__content--middle--button
-          = link_to users_create_path  do
+          = link_to cards_path, method: :post  do
             %button#add_card_btn{type: "button"}
               .add_card_btn 
                 .add_card_btn__icon
@@ -28,5 +28,4 @@
       = link_to root_path do
         .card__content--bottom
           支払い方法について
-= render "download"
-= render "shared/footer"
+= render "/shared/footer"
