@@ -1,0 +1,146 @@
+.itemsWrapper{
+  background-color: $mainGray;
+  span{
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    background: $mainRed;
+  }
+  .header{
+    background-color: $mainGray;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__logo{
+      display: block;
+      width: 185px;
+      height: 50px;
+    }
+  }
+
+#previews{
+}
+
+.js-file_group{
+
+}
+.hidden-destroy{
+  visibility: hidden;
+}
+
+
+
+
+
+  .itemsForm{
+    width: 700px;
+    padding: 40px;
+    margin: 0 40px;
+    margin: 0 auto;
+    background-color: $mainWhite;
+    select{
+      height: 50px;
+      width: 100%;
+      font-size: 16px;
+    }
+    &__nameBox{
+      &__title{
+        border-top: 2px solid #eee;
+      }
+      &__form{
+          height: 50px;
+          width: 100%;
+          font-size: 16px;
+          line-height: 1.5;
+      }
+    }
+    &__descriptionBox{
+      &__form{
+        height: 100px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+        resize: none;
+      }
+    }
+    &__categoryBox{
+      &__form{
+          height: 50px;
+          width: 100%;
+          font-size: 14px;
+          line-height: 1.5;
+      }
+    }
+  &__shippingCostSideBox{
+    &__bigTitle{
+      border-top: 2px solid #eee;
+    }
+  }
+
+
+  &__priceBox{
+    &__title{
+      border-top: 2px solid #eee;
+    }
+    &__form{
+      margin-left: 50%;
+      width: 50%;
+      height: 50px;
+      font-size: 30px;
+      text-align: right;
+    }
+  }
+    &__submit{
+      .btn{
+        color: white;
+        background-color: $mainGreen;
+        width: 77%;
+        font-size: 17px;
+        min-height: 48px;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+      .btn-default{
+        background: #aaa;
+        border: 1px solid #aaa;
+        color: $mainWhite;
+        width: 45%;
+        margin: 24px auto 0;
+        line-height: 48px;
+        font-size: 14px;
+        text-align: center;
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+  .footer2{
+    font-size: 13px;
+    color: $mainBlack;
+    background-color: $mainGray;
+    text-align: center;
+    width: 456px;
+    margin: 0 auto;
+    .policy{
+      color: $mainBlack;
+      display: block;
+      width: 100%;
+    }
+    a{
+      color: $mainBlack;
+    }
+    &__logo{
+      width: 185px;
+      height: 50px;
+    }
+    &__copyright {
+      margin: 0;
+      background-color: $mainGray;
+    }
+  }
+}
