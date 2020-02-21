@@ -43,4 +43,10 @@ $(function(){
   }, function(){
     $(this).css("background-color", "#FF3333");
   });
+
+  $("#logout_btn").hover(function() {
+    $(this).css("background-color", "#FF3355");
+  },function() {
+    $(this).css("background-color", "#FF3333");
+  });
 });
