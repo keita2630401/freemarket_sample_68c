@@ -57,7 +57,7 @@
       }
     }
   }
-}
+
 
 .buy-content{
   padding: 32px 16px;
@@ -124,6 +124,10 @@
   }
 }
 
+img{
+  width: 185px;
+}
+
 
 .delivery-address{
   border-bottom: 1px solid #ccc;
@@ -169,6 +173,7 @@
   margin-top: 32px;
 }
 
+
 .buy-content__inner--imagebox{
   display: flex;
   .buy-detail{
@@ -191,3 +196,5 @@
   justify-content: center;
   font-size: 12px;
 }
+}
+

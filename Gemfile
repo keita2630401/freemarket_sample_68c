@@ -85,3 +85,5 @@ gem 'devise'
 gem 'kaminari'
 gem 'haml-rails'
 gem 'font-awesome-sass'
+gem 'ancestry'
+
