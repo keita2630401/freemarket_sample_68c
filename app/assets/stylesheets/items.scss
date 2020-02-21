@@ -1,13 +1,13 @@
-.wrapper{
+.zentai{
   height: 100%;
   background-color: rgb(245, 245, 245);
 
-.content{
-  width: 700px;
-  margin: 0 auto;
-  background-color: white;
-  height: 100%;
-  }
+ .content{
+ width: 700px;
+ margin: 0 auto;
+ background-color: white;
+ height: 100%;
+}
 
 .header__logo{
   background-color: whitesmoke;
@@ -285,7 +285,6 @@ select{
   height: 35px;
   width: 50%;
   font-size: 13px;
-  float: right;
 }
 
 .delibery__charge{
