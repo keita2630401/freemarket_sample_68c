@@ -5,6 +5,10 @@ devise_for :users, :controllers => {
   root  'items#index'
   get "/purchase",to: "items#purchase"
   resources :adresses, only: [:index, :new, :create, :edit, :update]
+  resources :users, only: [:index]
+  get 'users/logout', to: 'users#logout'
+  get '/cards', to: 'cards#card'
+
   resources :items do
     resources :purchase, only: [:index] do
       collection do

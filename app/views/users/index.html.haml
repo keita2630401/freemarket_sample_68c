@@ -1,0 +1,11 @@
+= render "shared/header"
+.header_sub
+  = link_to root_path, class: "link_edit" do
+    フリマ
+  = icon('fa', 'chevron-right', class: "header_sub_icon")
+  マイページ
+.MyPage
+  .MyPage__box
+    = render "left"
+    = render "right"
+= render "shared/footer"

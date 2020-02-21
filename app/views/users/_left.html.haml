@@ -1,0 +1,87 @@
+.MyPage__box__left
+  %ul.MyPage__box__left--box1
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        マイページ
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        いいね！一覧
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        出品する
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        出品した商品 - 出品中
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        出品した商品 - 売却済み
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        購入した商品
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        評価一覧
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        ガイド
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        お問い合わせ
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+  %ul.MyPage__box__left--box2
+    .MyPage__box__left--box2__selected
+      設定
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        プロフィール
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        発送元・お届け先住所変更
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    = link_to new_card_path do
+      %li.MyPage__linkbox
+        .MyPage__linkbox__left
+          支払い方法
+        .MyPage__linkbox__right
+          = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        メール/パスワード
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        本人情報
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    %li.MyPage__linkbox
+      .MyPage__linkbox__left
+        電話番号の確認
+      .MyPage__linkbox__right
+        = icon('fa', 'chevron-right')
+    = link_to users_logout_path, method: :get do
+      %li.MyPage__linkbox
+        .MyPage__linkbox__left
+          ログアウト
+        .MyPage__linkbox__right
+          = icon('fa', 'chevron-right')

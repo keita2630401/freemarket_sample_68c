@@ -1,0 +1,17 @@
+= render "shared/header"
+.header_sub
+  = link_to root_path, class: "link_edit" do
+    フリマ 
+  = link_to users_path, class: "link_edit" do
+    = icon('fa', 'chevron-right', class: "header_sub_icon") 
+    マイページ
+  = icon('fa', 'chevron-right', class: "header_sub_icon") 
+  ログアウト
+.MyPage
+  .MyPage__box
+    = render "left"
+    .logout_content
+      = link_to destroy_user_session_path, method: :delete do
+        %button#logout_btn{type: "button"}
+          ログアウト
+= render "shared/footer"

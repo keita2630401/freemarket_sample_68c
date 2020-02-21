@@ -5,6 +5,10 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "./top.scss";
+@import "./users/index";
+@import "./users/logout";
+@import "./cards/new";
+@import "./cards/create";
 @import "./items.scss";
 @import "./modules/header.scss";
 @import "./modules/footer.scss";
@@ -12,6 +16,7 @@
 @import "./modules/purchase.scss";
 @import "./items_show.scss";
 @import "./modules/purchase.scss";
+
 
 body{
   margin: 0;
