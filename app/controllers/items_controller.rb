@@ -5,7 +5,6 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.includes(:images).last(3).reverse
-    @parents = Category.roots
   end
 
   def show

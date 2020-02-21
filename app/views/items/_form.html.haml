@@ -40,17 +40,17 @@
           %span 必須
         = find_and_preserve(f.text_area :description, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", class: "itemsForm__descriptionBox__form")
 
-      .itemsForm__categoryBox
-        %p.itemsForm__categoryBox__title
-          カテゴリー
-          %span 必須
-        = f.collection_select :a_id, Condition.all, :id, :name, prompt: "選択してください", class: "itemsForm__categoryBox__form"
+      -# .itemsForm__categoryBox
+      -#   %p.itemsForm__categoryBox__title
+      -#     カテゴリー
+      -#     %span 必須
+      -#   = f.collection_select :a_id, Condition.all, :id, :name, prompt: "選択してください", class: "itemsForm__categoryBox__form"
 
-      .itemsForm__brandBox
-        %p.itemsForm__brandBox__title
-          ブランド
-          %span 任意
-        = f.collection_select :a_id, Condition.all, :id, :name, prompt: "選択してください", class: "itemsForm__brandBox__form"
+      -# .itemsForm__brandBox
+      -#   %p.itemsForm__brandBox__title
+      -#     ブランド
+      -#     %span 任意
+      -#   = f.collection_select :a_id, Condition.all, :id, :name, prompt: "選択してください", class: "itemsForm__brandBox__form"
 
       .itemsForm__conditionBox
         %p.itemsForm__conditionBox__title
