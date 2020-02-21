@@ -1,29 +1,34 @@
 class PurchaseController < ApplicationController
 
   require 'payjp'
+  before_action :set_card, only: [:index, :pay]
 
   def index
-    card = Card.where(user_id: current_user.id).first
-    if card.blank?
+    if @card.blank?
       redirect_to controller: "cards", action: "new"
     else
       Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
-      customer = Payjp::Customer.retrieve(card.customer_id)
-      @default_card_information = customer.cards.retrieve(card.card_id)
+      customer = Payjp::Customer.retrieve(@card.customer_id)
+      @default_card_information = customer.cards.retrieve(@card.card_id)
     end
   end
   
   def pay
     @item = Item.find(params[:item_id])
-    card = Card.where(user_id: current_user.id).first
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
     Payjp::Charge.create(
       :amount => @item.price,
-      :customer => card.customer_id,
+      :customer => @card.customer_id,
       :currency => 'jpy',
     )
     redirect_to action: 'done'
-    Item.find(params[:item_id]).update(status:'購入済み')
+    @item.update(status:'購入済み')
+  end
+
+  private
+
+  def set_card
+    @card = Card.where(user_id: current_user.id).first
   end
 
 end

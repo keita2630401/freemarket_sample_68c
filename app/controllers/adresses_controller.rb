@@ -32,7 +32,7 @@ class AdressesController < ApplicationController
   private
 
   def adress_params
-    params.require(:adress).permit(:post_number, :prefecture_id, :municipality, :town, :building).merge(user_id: current_user.id)
+    params.require(:adress).permit(:post_number, :prefecture_id, :municipality, :town, :building, :telephone_number).merge(user_id: current_user.id)
   end
 
 end
