@@ -15,7 +15,7 @@ devise_for :users, :controllers => {
   end
   resources :cards, only: [:new, :show] do
     collection do
-      post 'display', to: 'cards#show'
+      post 'ono', to: 'cards#ono'
       post 'pay', to: 'cards#pay'
       post 'delete', to: 'cards#delete'
     end
