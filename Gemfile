@@ -83,4 +83,5 @@ gem 'jquery-rails'
 gem 'active_hash'
 gem 'devise'
 gem 'haml-rails'
-gem "font-awesome-sass"
+gem 'font-awesome-sass'
+gem 'ancestry'

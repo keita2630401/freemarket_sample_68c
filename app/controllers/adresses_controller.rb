@@ -1,8 +1,8 @@
 class AdressesController < ApplicationController
-  
+
   def index
   end
-  
+
   def new
     @adress = Adress.new
   end
@@ -16,7 +16,7 @@ class AdressesController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
   end
 
@@ -30,7 +30,7 @@ class AdressesController < ApplicationController
   end
 
   private
-  
+
   def adress_params
     params.require(:adress).permit(:post_number, :prefecture_id, :municipality, :town, :building).merge(user_id: current_user.id)
   end
