@@ -2,10 +2,10 @@ class ItemsController < ApplicationController
 
   require 'payjp'
   before_action :set_item, only: [:show, :destroy, :edit, :update]
+  before_action :set_category, only: [:index, :show]
 
   def index
     @items = Item.includes(:images).last(3).reverse
-    @parents = Category.roots
   end
 
   def show
@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    if @item.save!
+    if @item.save
       redirect_to root_path
     else
       render :new
@@ -62,6 +62,10 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  def set_category
+    @parents = Category.roots
   end
 
 end
