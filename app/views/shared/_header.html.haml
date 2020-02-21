@@ -15,33 +15,17 @@
         %li.header__sub__leftBox__list__categoryMenu
           = link_to "カテゴリー", root_path
           %ul.header__sub__leftBox__list__categoryMenu__secondLevel
-            %li.header__sub__leftBox__list__categoryMenu__secondLevel--list
-              = link_to "レディース", root_path
-              %ul.header__sub__leftBox__list__categoryMenu__thirdLevel
-                %li.header__sub__leftBox__list__categoryMenu__thirdLevel--list
-                  = link_to "パンツ", root_path
-                %li.header__sub__leftBox__list__categoryMenu__thirdLevel--list
-                  = link_to "パンツ", root_path
-                  %ul.header__sub__leftBox__list__categoryMenu__fourthLevel
-                    %li.header__sub__leftBox__list__categoryMenu__fourthLevel--list
-                      = link_to "新品", root_path
-            %li.header__sub__leftBox__list__categoryMenu__secondLevel--list
-              = link_to "レディース", root_path
-              %ul.header__sub__leftBox__list__categoryMenu__thirdLevel
-                %li.header__sub__leftBox__list__categoryMenu__thirdLevel--list
-                  = link_to "パンツ", root_path
-                  %ul.header__sub__leftBox__list__categoryMenu__fourthLevel
-                    %li.header__sub__leftBox__list__categoryMenu__fourthLevel--list
-                      = link_to "新品", root_path
-        %li.header__sub__leftBox__list__brand
-          = link_to "ブランド", root_path
-          %ul.header__sub__leftBox__list__brand__secondLevel
-            %li.header__sub__leftBox__list__brand__secondLevel--list
-              = link_to "レディース", root_path
-            %li.header__sub__leftBox__list__brand__secondLevel--list
-              = link_to "レディース", root_path
-            %li.header__sub__leftBox__list__brand__secondLevel--list
-              = link_to "レディース", root_path
+            - @parents.each do |parent|
+              %li.header__sub__leftBox__list__categoryMenu__secondLevel--list
+                = link_to parent.name, root_path
+                %ul.header__sub__leftBox__list__categoryMenu__thirdLevel
+                  - parent.children.each do |child|
+                    %li.header__sub__leftBox__list__categoryMenu__thirdLevel--list
+                      = link_to child.name, root_path
+                      %ul.header__sub__leftBox__list__categoryMenu__fourthLevel
+                        - child.children.each do |grandchild|
+                          %li.header__sub__leftBox__list__categoryMenu__fourthLevel--list
+                            = link_to grandchild.name, root_path
     .header__sub__rightBox
       %ul.header__sub__rightBox__list
         %li.header__sub__rightBox__list--login
@@ -52,3 +36,7 @@
           = link_to "ログアウト", destroy_user_session_path, method: :delete
         %li.header__sub__rightBox__list--myPage
           = link_to "マイページ", root_path
+
+
+      -# - @parents.each do |parent|
+      -#   = parent.name
