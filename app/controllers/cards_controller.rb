@@ -1,6 +1,7 @@
 class CardsController < ApplicationController
-  def new
+  def card
   end
-  def create
+
+  def new
   end
 end

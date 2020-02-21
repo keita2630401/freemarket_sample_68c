@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   resources :adresses, only: [:index, :new, :create, :edit, :update]
   resources :users, only: [:index]
   resources :items
-  resources :cards, only: [:new, :create]
+  resources :cards, only: [:new, :show]
   get 'users/logout', to: 'users#logout'
-  get '/cards', to: 'cards#create'
+  get '/cards', to: 'cards#card'
 end
 
