@@ -76,4 +76,5 @@ ActiveRecord::Schema.define(version: 2020_02_21_040821) do
   end
 
   add_foreign_key "images", "items"
+
 end

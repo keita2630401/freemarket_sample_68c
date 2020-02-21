@@ -83,7 +83,7 @@
     - else
       .itemShow__itemBox__Btnlist
         %button.itemShow__itemBox__Btnlist__buyBtn
-          = link_to "#" do
+          = link_to  item_purchase_index_path(@item.id) do
             購入画面に進む
     .itemShow__itemBox__optionalArea
       %button.itemShow__itemBox__optionalArea__likeBtn

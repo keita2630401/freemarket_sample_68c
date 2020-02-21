@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
+
+  require 'payjp'
   before_action :set_item, only: [:show, :destroy, :edit, :update]
+
   def index
     @items = Item.includes(:images).last(3).reverse
   end
@@ -21,6 +24,8 @@ class ItemsController < ApplicationController
       render :new
     end
   end
+  
+  
 
   def destroy
     if @item.destroy
