@@ -25,8 +25,8 @@ class ItemsController < ApplicationController
       render :new
     end
   end
-  
-  
+
+
 
   def destroy
     if @item.destroy
