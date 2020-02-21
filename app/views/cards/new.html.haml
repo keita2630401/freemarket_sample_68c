@@ -17,7 +17,7 @@
         クレジットカード情報入力
       .content__credit-card
         .content__credit-card__inner
-          = form_with url: "#", method: :post, html: { name: "inputForm" } do |f|
+          = form_with url: pay_cards_path, method: :post, html: { name: "inputForm" } do |f|
             .content__credit-card__inner__label 
               = f.label :カード番号, class: 'label'
               %span 必須

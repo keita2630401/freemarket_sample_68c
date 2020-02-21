@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
-  # belongs_to :user
-  # belongs_to :category
+  belongs_to :user, foreign_key: 'user_id'
+  belongs_to :category
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_many :images, :dependent => :delete_all
   belongs_to_active_hash :prefecture

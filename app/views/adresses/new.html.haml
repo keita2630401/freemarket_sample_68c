@@ -31,8 +31,12 @@
           %span.form-span-any 任意
           %br/
           = f.text_field :building, autocomplete: "building", placeholder: "例）柳ビル103"
+          = f.label :"電話番号"
+          %span.form-span-any 任意
+          %br/
+          = f.telephone_field :telephone_number, autocomplete: "telephone_number", placeholder: "例）柳ビル103"
         .actions
-          = f.submit "登録する"
+          = f.submit "クレジットカード登録へ"
   %footer
     = link_to image_tag("/logo.png", class:"registration-logo"), "/"
     %p.footer-small
