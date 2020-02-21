@@ -55,7 +55,7 @@
       .itemsForm__conditionBox
         %p.itemsForm__conditionBox__title
           商品の状態
-          %span 任意
+          %span 必須
         = f.collection_select :condition_id, Condition.all, :id, :name, prompt: "選択してください", class: "itemsForm__conditionBox__form"
 
       .itemsForm__shippingCostSideBox
@@ -63,19 +63,19 @@
         %p.itemsForm__shippingCostSideBox__title
           発送料の負担
           %span 必須
-        = f.collection_select :ShippingCostSide_id, ShippingCostSide.all, :id, :name, prompt: "選択してください", class:"itemsForm__shippingCostSideBox__form"
+        = f.collection_select :shipping_cost_side_id, ShippingCostSide.all, :id, :name, prompt: "選択してください", class:"itemsForm__shippingCostSideBox__form"
 
       .itemsForm__originAreaBox
         %p.itemsForm__originAreaBox__title
           発送元の地域
           %span 必須
-        = f.collection_select :OriginArea_id, Prefecture.all, :id, :name, prompt: "選択してください", class: "itemsForm__originAreaBox__form"
+        = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "選択してください", class: "itemsForm__originAreaBox__form"
 
       .itemsForm__deliberyDaysBox
         %p.itemsForm__deliberyDaysBox__title
           発送までの日数
           %span 必須
-        = f.collection_select :ShippingDays_id, ShippingDays.all, :id, :name, prompt: "選択してください", class: "itemsForm__deliberyDaysBox__form"
+        = f.collection_select :shipping_days_id, ShippingDays.all, :id, :name, prompt: "選択してください", class: "itemsForm__deliberyDaysBox__form"
 
       .itemsForm__priceBox
         %p.itemsForm__priceBox__title
