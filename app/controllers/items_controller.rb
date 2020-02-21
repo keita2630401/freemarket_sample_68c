@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :destroy, :edit, :update]
   def index
-    @items = Item.all.last(3).reverse
+    @items = Item.includes(:images).last(3).reverse
   end
 
   def show
@@ -54,4 +54,5 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
+
 end
