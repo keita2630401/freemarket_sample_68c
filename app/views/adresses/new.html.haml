@@ -34,7 +34,7 @@
           = f.label :"電話番号"
           %span.form-span-any 任意
           %br/
-          = f.telephone_field :telephone_number, autocomplete: "telephone_number", placeholder: "例）柳ビル103"
+          = f.text_field :telephone_number, autocomplete: "telephone_number", placeholder: "例）09012345678"
         .actions
           = f.submit "クレジットカード登録へ"
   %footer
