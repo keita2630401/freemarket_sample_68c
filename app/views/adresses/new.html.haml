@@ -1,3 +1,5 @@
+javascript:
+  window.onload = addToNewUrl();
 .registration_body
   %header
     = link_to image_tag("/logo.png", class:"registration-logo"), "/"
@@ -5,6 +7,12 @@
     .registration-main
       %h2.registration-main__head
         住所登録
+      #error_explanation
+        - if @adress.errors.any?
+          %h2= "#{@adress.errors.full_messages.count}件のエラーが発生しました。"
+          %ul
+            - @adress.errors.full_messages.each do |message|
+              %li= message
       = form_with model: @adress, action:"/adresses/create", local: true do |f|
         .field
           = f.label :"郵便番号"
