@@ -60,6 +60,7 @@ Things you may want to cover:
 |price|integer|null: false|
 |name|string|null: false|
 |description|text|null: false|
+|status|string|default: "exihibiting"|
 |condition_id|integer|null: false|
 |shipping_cost_side_id|integer|null: false|
 |shipping_method_id|integer|null: false|
