@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
 
   def show
     @items = Item.all
+    @card = Card.where(user_id: current_user.id).first
   end
 
   def new

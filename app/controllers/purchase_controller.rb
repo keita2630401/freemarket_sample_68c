@@ -12,7 +12,8 @@ class PurchaseController < ApplicationController
       @default_card_information = customer.cards.retrieve(@card.card_id)
     end
   end
-  
+
+
   def pay
     @item = Item.find(params[:item_id])
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
