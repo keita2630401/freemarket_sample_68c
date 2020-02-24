@@ -28,11 +28,13 @@
                             = link_to grandchild.name, root_path
     .header__sub__rightBox
       %ul.header__sub__rightBox__list
-        %li.header__sub__rightBox__list--login
-          = link_to "ログイン", new_user_session_path
-        %li.header__sub__rightBox__list--registration
-          = link_to "新規会員登録", new_user_registration_path
-        %li.header__sub__rightBox__list--logout
-          = link_to "ログアウト", destroy_user_session_path, method: :delete
-        %li.header__sub__rightBox__list--myPage
-          = link_to "マイページ", root_path
+        - if !current_user
+          %li.header__sub__rightBox__list--login
+            = link_to "ログイン", new_user_session_path
+          %li.header__sub__rightBox__list--registration
+            = link_to "新規会員登録", new_user_registration_path
+        - else
+          %li.header__sub__rightBox__list--logout
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+          %li.header__sub__rightBox__list--myPage
+            = link_to "マイページ", root_path
