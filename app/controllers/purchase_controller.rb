@@ -12,7 +12,8 @@ class PurchaseController < ApplicationController
       @default_card_information = customer.cards.retrieve(@card.card_id)
     end
   end
-  
+
+
   def pay
     @item = Item.find(params[:item_id])
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
@@ -24,8 +25,6 @@ class PurchaseController < ApplicationController
     redirect_to action: 'done'
     @item.update(status:'購入済み')
   end
-
-  private
 
   def set_card
     @card = Card.where(user_id: current_user.id).first

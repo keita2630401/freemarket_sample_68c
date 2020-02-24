@@ -1,14 +1,14 @@
 = render "/shared/header"
 .header_sub
   = link_to root_path, class: "link_edit" do
-    フリマ 
+    フリマ
   = link_to users_path, class: "link_edit" do
-    = icon('fa', 'chevron-right', class: "header_sub_icon") 
+    = icon('fa', 'chevron-right', class: "header_sub_icon")
     マイページ
   = link_to new_card_path, class: "link_edit" do
-    = icon('fa', 'chevron-right', class: "header_sub_icon") 
+    = icon('fa', 'chevron-right', class: "header_sub_icon")
     支払い方法
-  = icon('fa', 'chevron-right', class: "header_sub_icon") 
+  = icon('fa', 'chevron-right', class: "header_sub_icon")
   クレジットカード情報入力
 .MyPage
   .MyPage__box
@@ -19,7 +19,7 @@
       .content__credit-card
         .content__credit-card__inner
           = form_with url: pay_cards_path, method: :post, html: { name: "inputForm" } do |f|
-            .content__credit-card__inner__label 
+            .content__credit-card__inner__label
               = f.label :カード番号, class: 'label'
               %span 必須
             .content__credit-card__inner__text_field
@@ -47,4 +47,4 @@
               = link_to root_path do
                 = f.submit '追加する', class: 'content-bottom--add-btn', id: 'token_submit'
             = link_to "今はしない", root_path, class:"registration-main__for-sign-up__btn"
-= render "/shared/footer" 
+= render "/shared/footer"
