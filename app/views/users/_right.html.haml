@@ -5,7 +5,7 @@
         .MyPage__box__right__box__top__profile--icon
           = image_tag '/member_photo_noimage_thumb.png', alt: "プロフィール写真"
         .MyPage__box__right__box__top__profile--name
-          小野メンター
+          = current_user.nickname
         %ul.MyPage__box__right__box__top__profile--count
           %li.MyPage__box__right__box__top__profile--count__evaluation
             評価 0
