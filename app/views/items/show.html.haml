@@ -85,10 +85,10 @@
         %button.itemShow__itemBox__Btnlist__buyBtn
           -if @card.blank?
             = link_to new_card_path do
-              購入画面に進むb
+              購入画面に進む
           -else
             = link_to  item_purchase_index_path(@item.id) do
-              購入画面に進むa
+              購入画面に進む
     .itemShow__itemBox__optionalArea
       %button.itemShow__itemBox__optionalArea__likeBtn
         = icon("fas","star")
