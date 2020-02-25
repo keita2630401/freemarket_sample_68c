@@ -78,7 +78,7 @@
       %ul.topMain__box5__contents__cardList
         - @items.each do |item|
           %li.topMain__box5__contents__cardList--card
-            = link_to image_tag("/member_photo_noimage_thumb.png", alt: "card", class: "card"), edit_item_path(item.id)
+            = link_to image_tag(@image.find_by(item_id: item.id).image.url, alt: "card", class: "card"), edit_item_path(item.id)
             %h3.name #{item.name}
             %p.price #{item.price}円
             %p.likes ✭0
@@ -93,7 +93,7 @@
       %ul.topMain__box6__contents__cardList
         - @items.each do |item|
           %li.topMain__box6__contents__cardList--card
-            = link_to image_tag("/member_photo_noimage_thumb.png", alt: "card", class: "card"), item_path(item.id)
+            = link_to image_tag(@image.find_by(item_id: item.id).image.url, alt: "card", class: "card"), item_path(item.id)
             %h3.name #{item.name}
             %p.price #{item.price}円
             %p.likes ✭0

@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.includes(:images).last(3).reverse
+    @image = Image.all
   end
 
   def show
