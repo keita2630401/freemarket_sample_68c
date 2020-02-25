@@ -12,6 +12,7 @@
           = image_tag "/google-play-badge.png", alt: "googlePlayリンク", class: "googleImg"
         = link_to root_path do
           = image_tag "/App_Store_Badge.png", alt: "appleStoreリンク", class: "appleImg"
+
   .topMain__box2
     .topMain__box2__contents
       .topMain__box2__contents__title
@@ -38,6 +39,7 @@
             手数料
             %span< 業界最安
           %p.description 最大3%でお得に出品&購入！
+
   .topMain__box3
     .topMain__box3__contents
       .topMain__box3__contents__title
@@ -52,6 +54,7 @@
           = image_tag "/google-play-badge.png", alt: "googlePlayリンク", class: "googleImg"
         = link_to root_path do
           = image_tag "/App_Store_Badge.png", alt: "appleStoreリンク", class: "appleImg"
+
   .topMain__box4
     .topMain__box4__contents
       .topMain__box4__contents__title
@@ -69,6 +72,7 @@
           = image_tag "/icon-04.png", alt: "card", class: "card"
           %h3.steps 様々な支払いに対応
           %p.description お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+
   .topMain__box5
     .topMain__box5__contents
       .topMain__box5__contents__title
@@ -78,7 +82,7 @@
       %ul.topMain__box5__contents__cardList
         - @items.each do |item|
           %li.topMain__box5__contents__cardList--card
-            = link_to image_tag("/member_photo_noimage_thumb.png", alt: "card", class: "card"), edit_item_path(item.id)
+            = link_to image_tag(item.images.first.image_url, alt: "card", class: "card"), item_path(item.id)
             %h3.name #{item.name}
             %p.price #{item.price}円
             %p.likes ✭0
@@ -92,12 +96,13 @@
         %h3.subtitle アーカイバ
       %ul.topMain__box6__contents__cardList
         - @items.each do |item|
-          %li.topMain__box6__contents__cardList--card
-            = link_to image_tag("/member_photo_noimage_thumb.png", alt: "card", class: "card"), item_path(item.id)
+          %li.topMain__box5__contents__cardList--card
+            = link_to image_tag(item.images.first.image_url, alt: "card", class: "card"), item_path(item.id)
             %h3.name #{item.name}
             %p.price #{item.price}円
             %p.likes ✭0
             %p.tax (税込み)
+
   .topMain__box7
     .topMain__box7__contents
       .topMain__box7__contents__subTitle
@@ -109,4 +114,5 @@
           = image_tag "/google-play-badge.png", alt: "googlePlayリンク", class: "googleImg"
         = link_to root_path do
           = image_tag "/App_Store_Badge.png", alt: "appleStoreリンク", class: "appleImg"
+
 =render  "shared/footer"
