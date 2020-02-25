@@ -44,7 +44,6 @@
                 %span 必須
               = f.text_field :cvc, type: 'text', class: 'input-number', placeholder: 'カード背面4桁もしくは3桁の番号', maxlength: "4"
             .content-bottom#card_token
-              = link_to root_path do
-                = f.submit '追加する', class: 'content-bottom--add-btn', id: 'token_submit'
+              = f.submit '追加する', class: 'content-bottom--add-btn', id: 'token_submit'
             = link_to "今はしない", root_path, class:"registration-main__for-sign-up__btn"
 = render "/shared/footer"
