@@ -5,9 +5,4 @@ class UsersController < ApplicationController
   def logout
   end
 
-  def card
-  end
-
-  def create
-  end
 end
