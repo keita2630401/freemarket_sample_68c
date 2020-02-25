@@ -29,14 +29,17 @@
     .itemShow__itemBox__imageBox
       %ul
         %li
-          = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", alt: "フリマ""商品ページ")
+          = link_to image_tag(@item.images.first.image_url, alt: "フリマ""商品ページ")
           %ul
             %li
-              = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", alt: "フリマ""商品ページ")
+              -if (@item.images.second)
+                = link_to image_tag(@item.images.second.image_url, alt: "フリマ""商品ページ")
             %li
-              = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/11/a005.png", alt: "フリマ""商品ページ")
+              -if (@item.images.third)
+                = link_to image_tag(@item.images.third.image_url, alt: "フリマ""商品ページ")
             %li
-              = link_to image_tag("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/12/a006.png", alt: "フリマ""商品ページ")
+              -if (@item.images.fourth)
+                = link_to image_tag(@item.images.fourth.image_url, alt: "フリマ""商品ページ")
     .itemShow__itemBox__price
       %span ¥#{@item.price}
     .itemShow__itemBox__priceDetail
