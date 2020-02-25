@@ -80,7 +80,7 @@
       .topMain__box5__contents__subtitle
         %h3.subtitle 新規投稿商品
       %ul.topMain__box5__contents__cardList
-        - @items.each do |item|
+        - @itemsExihibiting.each do |item|
           %li.topMain__box5__contents__cardList--card
             - if item.images.present?
               = link_to image_tag(item.images.first.image_url, alt: "card", class: "card"), item_path(item.id)
@@ -98,7 +98,7 @@
       .topMain__box6__contents__subtitle
         %h3.subtitle アーカイバ
       %ul.topMain__box6__contents__cardList
-        - @items.each do |item|
+        - @itemsExihibiting.each do |item|
           %li.topMain__box5__contents__cardList--card
             - if item.images.present?
               = link_to image_tag(item.images.first.image_url, alt: "card", class: "card"), item_path(item.id)

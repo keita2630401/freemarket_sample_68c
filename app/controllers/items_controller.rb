@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   before_action :set_category, only: [:index, :show]
 
   def index
-    @items = Item.includes(:images).last(3).reverse
+    @itemsExihibiting = Item.where(status: :exihibiting).last(3).reverse
   end
 
   def show
