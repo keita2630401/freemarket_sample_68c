@@ -109,8 +109,8 @@
         コメントする
   %ul.itemShow__Go
     %li
-      -if (@item.id - 1 > 0)
-        = link_to item_path(@item.id-1) do
+      -if (@item.previous)
+        = link_to item_path(@item.previous) do
           =icon("fas","angle-left")
           %span 前の商品
       -else
@@ -118,8 +118,8 @@
           =icon("fas","angle-left")
           %span 前の商品
     %li
-      -if (@item.id+1 <= @items.length)
-        = link_to item_path(@item.id+1) do
+      -if (@item.next)
+        = link_to item_path(@item.next) do
           %span 後ろの商品
           =icon("fas","angle-right")
       -else
