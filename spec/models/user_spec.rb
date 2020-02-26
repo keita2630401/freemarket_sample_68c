@@ -43,7 +43,6 @@ describe User do
       expect(user.errors[:first_name_kana]).to include("can't be blank")
     end
 
-
     # 7.birthdayが空では登録できないこと
     it "is invalid without a birthday" do
       user = build(:user, birthday: nil)
@@ -53,7 +52,7 @@ describe User do
 
     # 8. emailが空では登録できないこと
     it "is invalid without an email" do
-      user = build(:user, email: "")
+      user = build(:user, email: nil)
       user.valid?
       expect(user.errors[:email]).to include("can't be blank")
     end
@@ -67,7 +66,7 @@ describe User do
 
     # 10. passwordが存在してもpassword_confirmationが空では登録できないこと
     it "is invalid without a password_confirmation although with a password" do
-      user = build(:user, password_confirmation: "")
+      user = build(:user, password_confirmation: nil)
       user.valid?
       expect(user.errors[:password_confirmation]).to include("doesn't match Password")
     end
@@ -93,6 +92,5 @@ describe User do
       user.valid?
       expect(user.errors[:password]).to include("is too short (minimum is 7 characters)")
     end
-
   end
 end
