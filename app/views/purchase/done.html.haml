@@ -1,5 +1,42 @@
-%h2 購入が完了しました！
-%p （仮）Apple MacBook Pro 13インチ
-%p （仮）¥135,000(送料込み)
-
-= link_to "トップページへ", "/"
+.overall
+  %main.content
+    .header__logo
+      %a
+      = link_to image_tag("/logo.png", alt: "フリマ""出品ページ"),root_path
+    .item__information
+      %h2.single-head 購入内容の確認
+    %section.buy-content
+      .buy-content__inner
+        .buy-content__inner--imagebox
+          %h3.buy-image
+            = link_to image_tag(@item.images.first.image_url, alt: "購入する商品"),"#"
+          .buy-detail
+            %p.buy-detail__name #{@item.name}
+            %p.buy-detail__price
+              %span ¥#{@item.price}
+              -# 支払い金額の表示
+              %span.fee （税込）送料込み
+    %section.buy-item
+      .buy-item__form
+        .form
+          %ul.price-table
+            %li.price-table__pay
+              .price-table__pay--payment 支払い金額
+              .price-table__pay--call
+                %span ¥#{@item.price}
+  %footer.footer__logo
+    %nav
+      %ul.var
+        %li
+          %a
+            = link_to 'プライバシーポリシー', root_path
+        %li
+          %a
+            = link_to 'フリマ利用規約', root_path
+        %li
+          %a
+            = link_to '特定商取引に関する表記', root_path
+      %a
+        = link_to image_tag("/logo-white.png", alt: "フリマ"),root_path
+      %p
+        %small © Furima, Inc.
