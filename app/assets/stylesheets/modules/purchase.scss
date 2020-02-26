@@ -8,9 +8,9 @@
     margin: 0 auto;
     background-color: white;
     height: 100%;
-   }
+  }
 
- .header__logo{
+  .header__logo{
   background-color: whitesmoke;
   height: 120px;
   text-align: center;
@@ -36,9 +36,9 @@
     height: 220px;
     margin: 0 auto;
 
-     &__logo{
-       text-align: center;
-       padding: 40px 0;
+    &__logo{
+      text-align: center;
+      padding: 40px 0;
 
     a{
       display: block;
@@ -59,142 +59,150 @@
   }
 
 
-.buy-content{
-  padding: 32px 16px;
-  border-bottom: 1px solid #ccc;
-
-  &__inner{
-    max-width: 343px;
-    margin: 0 auto;
-  }
-}
-
-.buy-item{
-  padding: 32px 16px;
-
-  &__form{
-    max-width: 343px;
-    margin: 0 auto;
-  }
-  .price-table{
-    display: table;
-    border-collapse: collapse;
-    width: 100%;
-
-    &__pay{
-      display: flex;
-      justify-content: space-between;
-
-      &--payment{
-        font-weight: bold;
-        font-size: 18px;
-
-      }
-      span{
-        font-size:30px;
-      }
-    }
-  }
-
-  .buy-payment{
+  .buy-content{
+    padding: 32px 16px;
     border-bottom: 1px solid #ccc;
 
-    h3{
-      font-size: 14px;
+    &__inner{
+      max-width: 343px;
+      margin: 0 auto;
+
+      .buy-image{
+        margin-bottom: 40px;
+      }
+
+      .buy-detail__price{
+        margin-left: 50px;
+      }
+    }
+  }
+
+  .buy-item{
+    padding: 32px 16px;
+
+    &__form{
+      max-width: 343px;
+      margin: 0 auto;
+    }
+    .price-table{
+      display: table;
+      border-collapse: collapse;
+      width: 100%;
+
+      &__pay{
+        display: flex;
+        justify-content: space-between;
+
+        &--payment{
+          font-weight: bold;
+          font-size: 18px;
+
+        }
+        span{
+          font-size:30px;
+        }
+      }
     }
 
-    .fas{
-      color:#0099e8;
+    .buy-payment{
+      border-bottom: 1px solid #ccc;
+
+      h3{
+        font-size: 14px;
+      }
+
+      .fas{
+        color:#0099e8;
+      }
+
+      span{
+        color:#0099e8;
+        font-size: 14px;
+      }
+    }
+
+    .buy-point{
+      color: #888;
+      border-bottom: 1px solid #ccc;
+
+      label{
+        font-size: 14px;
+      }
+
+    }
+  }
+
+  img{
+    width: 185px;
+  }
+
+
+  .delivery-address{
+    border-bottom: 1px solid #ccc;
+
+    &__content{
+      display: flex;
     }
 
     span{
       color:#0099e8;
       font-size: 14px;
     }
-  }
 
-  .buy-point{
-    color: #888;
-    border-bottom: 1px solid #ccc;
-
-    label{
+    h3{
       font-size: 14px;
     }
-
   }
-}
 
-img{
-  width: 185px;
-}
+  .buy-btn{
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #888;
+    background: #888;
+    color: #fff;
+  }
+
+  .buy-image{
+      height: 80px;
+      width: 80px;
+      min-width: 80px;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .buy-user-info{
+    margin-top: 32px;
+  }
 
 
-.delivery-address{
-  border-bottom: 1px solid #ccc;
-
-  &__content{
+  .buy-content__inner--imagebox{
     display: flex;
+    .buy-detail{
+      margin-left:45px ;
+    }
   }
 
-  span{
-    color:#0099e8;
+  .buy-detail__name{
     font-size: 14px;
   }
 
-  h3{
+  .buy-detail__price{
     font-size: 14px;
+    font-weight: bold;
   }
-}
 
-.buy-btn{
-  display: block;
-  width: 100%;
-  line-height: 48px;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: center;
-  border: 1px solid #888;
-  background: #888;
-  color: #fff;
-}
-
-.buy-image{
-    height: 80px;
-    width: 80px;
-    min-width: 80px;
+  .var{
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
+    list-style: none;
     justify-content: center;
-    align-items: center;
-}
-
-.buy-user-info{
-  margin-top: 32px;
-}
-
-
-.buy-content__inner--imagebox{
-  display: flex;
-  .buy-detail{
-    margin-left:45px ;
+    font-size: 12px;
   }
-}
-
-.buy-detail__name{
-  font-size: 14px;
-}
-
-.buy-detail__price{
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.var{
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  font-size: 12px;
-}
 }
 
