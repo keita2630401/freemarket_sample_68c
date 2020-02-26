@@ -4,7 +4,7 @@
     = render "users/left"
     .card__input
       .content__title
-        %label 登録クレジットカード情報
+        %label.card__show 登録クレジットカード情報
         %br
         .content__credit-card
           = "**** **** **** " + @default_card_information.last4
@@ -14,5 +14,5 @@
           = exp_month + " / " + exp_year
           = form_tag(delete_cards_path, method: :post, id: 'charge-form',  name: "inputForm") do
             %input{ type: "hidden", name: "card_id", value: "" }
-            %button 削除する
+            %button.card__delete 削除する
 = render "shared/footer"
