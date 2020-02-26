@@ -1,5 +1,12 @@
-%h2 購入が完了しました！
-%p （仮）Apple MacBook Pro 13インチ
-%p （仮）¥135,000(送料込み)
-
-= link_to "トップページへ", "/"
+= render "shared/header"
+.MyPage
+  .MyPage__box
+    = render "users/left"
+    .card__content
+      %h2 購入が完了しました！
+      %h3.name #{@item.name}
+      %p.price #{@item.price}円
+      %p.tax (税込み)
+      = image_tag(@item.images.first.image_url, alt: "card", class: "card")
+      = link_to "トップページへ", "/"
+= render "shared/footer"
