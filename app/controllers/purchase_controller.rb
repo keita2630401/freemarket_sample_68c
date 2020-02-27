@@ -24,6 +24,7 @@ class PurchaseController < ApplicationController
     )
     redirect_to action: 'done'
     @item.update(status:'購入済み')
+    @item.update(buyer_id: current_user.id)
   end
 
   def done
