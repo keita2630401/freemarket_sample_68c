@@ -69,7 +69,11 @@
           %a ¥
         = f.number_field :price, placeholder: "0", class: "itemsForm__priceBox__form"
         .itemsForm__priceBox__commission 販売手数料(10%)
+        %span.itemsForm__priceBox__commission__price 0
+        円
         .itemsForm__priceBox__profit 販売利益
+        %span.itemsForm__priceBox__profit__price 0
+        円
       .itemsForm__submit
         = f.submit "出品する",class: 'btn'
         = link_to "戻る", root_path, class:"btn-default"
