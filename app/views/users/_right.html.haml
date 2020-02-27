@@ -22,4 +22,9 @@
             購入した商品
         .MyPage__box__right__box__bottom__view
           .MyPage__box__right__box__bottom__view__box
-            取引中の商品がありません
+            .MyPage__box__right__box__bottom__view__box__exhibit
+              - @UserItems.each do |item|
+                #{item.name}
+            .MyPage__box__right__box__bottom__view__box__buy
+              - @BuyerItems.each do |item|
+                #{item.name}

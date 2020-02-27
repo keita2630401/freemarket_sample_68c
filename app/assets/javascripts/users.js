@@ -23,19 +23,25 @@ $(function(){
     $(this).css("color", "#444444");
   });
 
+  $(".MyPage__box__right__box__bottom__view__box__exhibit").css("display", "block")
+  $(".MyPage__box__right__box__bottom__view__box__buy").css("display", "none")
 
   $(document).on('click', '.MyPage__box__right__box__bottom--product__log--right', function() {
+    $(".MyPage__box__right__box__bottom__view__box__exhibit").css("display", "none")
+    $(".MyPage__box__right__box__bottom__view__box__buy").css("display", "block")
     $(this).css("border-top", "2px solid red");
     $(this).css("background-color", "white");
     $(".MyPage__box__right__box__bottom--product__log--left").css("background-color", "#eeeeee");
     $(".MyPage__box__right__box__bottom--product__log--left").css("border-top", "0px");
-  }); 
+  });
   $(document).on('click', '.MyPage__box__right__box__bottom--product__log--left', function() {
+    $(".MyPage__box__right__box__bottom__view__box__exhibit").css("display", "block")
+    $(".MyPage__box__right__box__bottom__view__box__buy").css("display", "none")
     $(this).css("border-top", "2px solid red");
     $(this).css("background-color", "white");
     $(".MyPage__box__right__box__bottom--product__log--right").css("background-color", "#eeeeee");
     $(".MyPage__box__right__box__bottom--product__log--right").css("border-top", "0px");
-  }); 
+  });
 
 
   $("#add_card_btn").hover(function() {
