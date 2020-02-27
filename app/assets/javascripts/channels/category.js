@@ -3,28 +3,31 @@ $(function () {
     var html = `<option value="${category.id}">${category.name}</option>`;
     return html;
   }
+
   function appendChidrenBox(insertHTML) {
     var childSelectHtml = '';
     childSelectHtml = `
-    <div class="itemsForm__categoryBox__form" id="children_wrapper">
-      <select name="item[category_id]" id="item_children_category_id"><option value="">選択してください</option>
-        ${insertHTML}
-      </select>
-    </div>`;
+      <div class="itemsForm__categoryBox__form" id="children_wrapper">
+        <select id="children_category" name="item[category_id]"><option value="">選択してください</option>
+          ${insertHTML}
+        </select>
+      </div>`;
     $('.itemsForm__categoryBox').append(childSelectHtml);
   }
+
   function appendGrandChildrenBox(insertHTML) {
     var grandChildSelectHtml = '';
     grandChildSelectHtml = `
-    <div class="itemsForm__categoryBox__form" id="grandChildren_wrapper">
-      <select name="item[category_id]" id="item_grandChildren_category_id"><option value="">選択してください</option>
-        ${insertHTML}
-      </select>
-    </div>`;
+      <div class="itemsForm__categoryBox__form" id="grandChildren_wrapper">
+        <select id="grandChildren_category" name="item[category_id]" ><option value="">選択してください</option>
+          ${insertHTML}
+        </select>
+      </div>`;
     $('.itemsForm__categoryBox').append(grandChildSelectHtml);
   }
-  $('#item_category_id').on('change', function () {
-    var parentCategory = document.getElementById('item_category_id').value;
+
+  $('#parents_category').on('change', function () {
+    var parentCategory = document.getElementById('parents_category').value;
     if (parentCategory != "") {
       $.ajax({
         url: '/items/new',
@@ -49,8 +52,8 @@ $(function () {
       $('#grandChildren_wrapper').remove();
     }
   });
-  $('.itemsForm__categoryBox').on('change', '#item_children_category_id', function () {
-    var childrenCategory = document.getElementById('item_children_category_id').value;
+  $('.itemsForm__categoryBox').on('change', '#children_category', function () {
+    var childrenCategory = document.getElementById('children_category').value;
     if (childrenCategory != "") {
       $.ajax({
         url: '/items/new',

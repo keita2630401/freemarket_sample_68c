@@ -3,6 +3,7 @@ class Item < ApplicationRecord
   # belongs_to :category
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_many :images, :dependent => :delete_all
+  belongs_to :category
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :condition
   belongs_to_active_hash :shipping_cost_side

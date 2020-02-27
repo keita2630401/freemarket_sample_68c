@@ -8,17 +8,17 @@
       =icon("fas","angle-right")
     %li
       =link_to "#" do
-        メンズ
+        #{@category.root.name}
     %li
       =icon("fas","angle-right")
     %li
       = link_to "#" do
-        ジャケット/アウター
+        #{@category.parent.name}
     %li
       =icon("fas","angle-right")
     %li
       =link_to "#" do
-        ノーカラージャケット
+        #{@category.name}
     %li
       =icon("fas","angle-right")
     %li
@@ -53,7 +53,7 @@
           %td hoge
         %tr
           %th カテゴリー
-          %td #{@category.root.name}>#{@category.parent.name}>#{@category.name}
+          %td #{@category.root.name} #{icon("fas","angle-right")} #{@category.parent.name} #{icon("fas","angle-right")} #{@category.name}
         %tr
           %th
           %td
