@@ -24,7 +24,13 @@
           .MyPage__box__right__box__bottom__view__box
             .MyPage__box__right__box__bottom__view__box__exhibit
               - @UserItems.each do |item|
-                #{item.name}
+                .aaa
+                  = link_to image_tag(item.images.first.image_url, alt: "card", class: "card"), item_path(item.id)
+                  %h3.name #{item.name}
+                  %p.price #{item.price}円
             .MyPage__box__right__box__bottom__view__box__buy
               - @BuyerItems.each do |item|
-                #{item.name}
+                .aaa
+                  = link_to image_tag(item.images.first.image_url, alt: "card", class: "card"), item_path(item.id)
+                  %h3.name #{item.name}
+                  %p.price #{item.price}円

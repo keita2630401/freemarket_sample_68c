@@ -120,9 +120,41 @@
           &__view {
             text-align: center;
             &__box {
-              padding-top: 100px;
               color: #666666;
               font-weight: bold;
+              margin-right: 5%;
+              &__exhibit{
+                background-color: $mainWhite;
+                width: 30%;
+                margin-right: 10px;
+                .aaa{
+                  .card{
+                    width: 100px;
+                  }
+                  .name{
+                    font-weight: normal;
+                  }
+                  .price{
+                    margin: 0;
+                  }
+                }
+              }
+              &__buy{
+                background-color: $mainWhite;
+                width: 30%;
+                margin-right: 10px;
+                .aaa{
+                  .card{
+                    width: 100px;
+                  }
+                  .name{
+                    font-weight: normal;
+                  }
+                  .price{
+                    margin: 0;
+                  }
+                }
+              }
             }
           }
         }
