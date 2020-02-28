@@ -16,7 +16,7 @@ class PurchaseController < ApplicationController
 
   def pay
     @item = Item.find(params[:item_id])
-    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+    Payjp.api_key = Rails.application.credentials[:payjp][:PAYJP_SECRET_KEY]
     Payjp::Charge.create(
       :amount => @item.price,
       :customer => @card.customer_id,
