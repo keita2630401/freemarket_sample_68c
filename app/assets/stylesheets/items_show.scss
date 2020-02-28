@@ -119,31 +119,28 @@
         width: 100%;
         height: 50px;
         margin-bottom: 40px;
-        a{
-          color: #fff;
-          font-size: 14px;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
         }
-      }
       &__deleteBtn {
         background-color: #3CCACE;
         width: 100%;
         height: 50px;
         margin-bottom: 40px;
-        a{
-          color: #fff;
-          font-size: 14px;
-        }
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
       }
       &__buyBtn {
         background-color: #FF0000;
         width: 100%;
         height: 58px;
         margin-bottom: 30px;
-        a {
-          color: #fff;
-          font-size: 24px;
-          font-weight: bold;
-        }
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
       }
     }
     &__optionalArea {

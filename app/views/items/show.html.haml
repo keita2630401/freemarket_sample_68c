@@ -45,12 +45,12 @@
     .itemShow__itemBox__priceDetail
       %span (税込)
       %span 送料込み
-    .itemShow__itemBox__itemDetail #{@item.name}
+    .itemShow__itemBox__itemDetail #{@item.description}
     .itemShow__itemBox__tbody
       %table
         %tr
           %th 出品者
-          %td hoge
+          %td #{@item.user.nickname}
         %tr
           %th カテゴリー
           %td #{@category.root.name} #{icon("fas","angle-right")} #{@category.parent.name} #{icon("fas","angle-right")} #{@category.name}
@@ -77,20 +77,21 @@
           %td #{@item.shipping_days.name}
     - if current_user.id == @item.user_id
       .itemShow__itemBox__Btnlist
-        %button.itemShow__itemBox__Btnlist__editBtn
-          = link_to edit_item_path do
+        = link_to edit_item_path do
+          %button.itemShow__itemBox__Btnlist__editBtn
             商品の編集
-        %button.itemShow__itemBox__Btnlist__deleteBtn
-          = link_to item_path(@item.id), method: :delete do
+        = link_to item_path(@item.id), method: :delete do
+          %button.itemShow__itemBox__Btnlist__deleteBtn
             この商品の削除
     - else
       .itemShow__itemBox__Btnlist
-        %button.itemShow__itemBox__Btnlist__buyBtn
-          -if @card.blank?
-            = link_to new_card_path do
+        -if @card.blank?
+          = link_to new_card_path do
+            %button.itemShow__itemBox__Btnlist__buyBtn
               購入画面に進む
-          -else
-            = link_to  item_purchase_index_path(@item.id) do
+        -else
+          = link_to  item_purchase_index_path(@item.id) do
+            %button.itemShow__itemBox__Btnlist__buyBtn
               購入画面に進む
     .itemShow__itemBox__optionalArea
       %button.itemShow__itemBox__optionalArea__likeBtn
