@@ -66,6 +66,7 @@ Things you may want to cover:
 |shipping_method_id|integer|null: false|
 |prefecture_id|integer|null: false|
 |shipping_days_id|integer|null: false|
+|buyer_id|integer|---|
 |user_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 ### Association
