@@ -130,12 +130,15 @@
                 .aaa{
                   .card{
                     width: 100px;
+                    height: 100%;
+                    object-fit: cover;
                   }
                   .name{
                     font-weight: normal;
                   }
                   .price{
                     margin: 0;
+                    bottom: 0;
                   }
                 }
               }
@@ -146,12 +149,15 @@
                 .aaa{
                   .card{
                     width: 100px;
+                    height: 100px;
+                    object-fit: cover;
                   }
                   .name{
                     font-weight: normal;
                   }
                   .price{
                     margin: 0;
+                    bottom: 0;
                   }
                 }
               }

@@ -14,6 +14,7 @@
       %ul.header__sub__leftBox__list
         %li.header__sub__leftBox__list__categoryMenu
           = link_to "カテゴリー", root_path
+
           %ul.header__sub__leftBox__list__categoryMenu__secondLevel
             - @parents.each do |parent|
               %li.header__sub__leftBox__list__categoryMenu__secondLevel--list

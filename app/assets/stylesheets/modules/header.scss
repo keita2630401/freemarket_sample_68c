@@ -49,12 +49,11 @@
     align-items: center;
     &__leftBox{
       li a {
-        background-color: $mainWhite
-        ;
-      margin: 0;
-      padding: 0;
-      width: 200px;
-      display: block;
+        background-color: $mainWhite;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        display: block;
       }
       &__list{
         display: flex;
@@ -69,7 +68,6 @@
             opacity: 0;
             position: absolute;
             &--list{
-              position: relative;
               &:hover .header__sub__leftBox__list__categoryMenu__thirdLevel{
                 visibility: visible;
                 opacity: 1;
@@ -83,7 +81,6 @@
             top: 0;
             left: 100%;
             &--list{
-              position: relative;
               &:hover .header__sub__leftBox__list__categoryMenu__fourthLevel{
                 visibility: visible;
                 opacity: 1;

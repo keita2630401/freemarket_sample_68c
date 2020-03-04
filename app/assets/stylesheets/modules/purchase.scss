@@ -71,8 +71,8 @@
         margin-bottom: 40px;
       }
 
-      .buy-detail__price{
-        margin-left: 50px;
+      .buy-detail{
+        margin-left: 100px;
       }
     }
   }
@@ -184,9 +184,7 @@
 
   .buy-content__inner--imagebox{
     display: flex;
-    .buy-detail{
-      margin-left:45px ;
-    }
+
   }
 
   .buy-detail__name{
@@ -205,4 +203,3 @@
     font-size: 12px;
   }
 }
-
