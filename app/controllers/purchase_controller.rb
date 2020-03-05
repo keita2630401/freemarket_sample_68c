@@ -1,8 +1,7 @@
 class PurchaseController < ApplicationController
-
+  before_action :authenticate_user!
   require 'payjp'
   before_action :set_card, only: [:index, :pay]
-
   def index
     if @card.blank?
       redirect_to controller: "cards", action: "new"

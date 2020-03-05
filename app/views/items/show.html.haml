@@ -75,7 +75,7 @@
         %tr
           %th 発送日の目安
           %td #{@item.shipping_days.name}
-    - if current_user.id == @item.user_id
+    - if current_user.present? && (current_user.id == @item.user_id)
       .itemShow__itemBox__Btnlist
         = link_to edit_item_path do
           %button.itemShow__itemBox__Btnlist__editBtn
@@ -83,16 +83,15 @@
         = link_to item_path(@item.id), method: :delete do
           %button.itemShow__itemBox__Btnlist__deleteBtn
             この商品の削除
-    - else
+    - elsif current_user.present? && @card.blank?
       .itemShow__itemBox__Btnlist
-        -if @card.blank?
-          = link_to new_card_path do
-            %button.itemShow__itemBox__Btnlist__buyBtn
-              購入画面に進む
-        -else
-          = link_to  item_purchase_index_path(@item.id) do
-            %button.itemShow__itemBox__Btnlist__buyBtn
-              購入画面に進む
+        = link_to new_card_path do
+          %button.itemShow__itemBox__Btnlist__buyBtn
+            購入画面に進む
+    - else
+      = link_to  item_purchase_index_path(@item.id) do
+        %button.itemShow__itemBox__Btnlist__buyBtn
+          購入画面に進む
     .itemShow__itemBox__optionalArea
       %button.itemShow__itemBox__optionalArea__likeBtn
         = icon("fas","star")

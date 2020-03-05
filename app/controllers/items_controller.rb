@@ -1,17 +1,17 @@
 class ItemsController < ApplicationController
   require 'payjp'
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_item, only: [:show, :destroy, :edit, :update]
   before_action :set_category, only: [:index, :show]
   before_action :set_category_edit, only: [:edit, :update]
-
   def index
     @itemsExihibiting = Item.where(status: :exihibiting).last(3).reverse
   end
 
   def show
     @items = Item.all
-    @card = Card.where(user_id: current_user.id).first
     @category = Category.find(@item.category_id)
+    @card = Card.where(user_id: current_user.id).first if current_user.present?
   end
 
   def new
